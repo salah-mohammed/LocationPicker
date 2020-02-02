@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchView" customModule="LocationPickeerExample" customModuleProvider="target">
+            <connections>
+                <outlet property="btnSearch" destination="vAm-I9-P5t" id="wdS-lt-cke"/>
+                <outlet property="txtSearch" destination="hV8-c9-BHH" id="dDC-9T-fam"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="xVQ-sO-gKJ">
+            <rect key="frame" x="0.0" y="0.0" width="352" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="OxK-po-kDs">
+                    <rect key="frame" x="0.0" y="0.0" width="352" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vAm-I9-P5t">
+                            <rect key="frame" x="0.0" y="0.0" width="40" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="68L-EB-Inm"/>
+                            </constraints>
+                            <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <state key="normal" image="ic_search_purple"/>
+                            <connections>
+                                <action selector="btnSearch:" destination="-1" eventType="touchUpInside" id="MKi-nV-pzU"/>
+                            </connections>
+                        </button>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hV8-c9-BHH">
+                            <rect key="frame" x="48" y="0.0" width="294" height="50"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                        </textField>
+                    </subviews>
+                    <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="0.0" bottom="0.0" trailing="10"/>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="OxK-po-kDs" secondAttribute="trailing" id="7EZ-l9-ACe"/>
+                <constraint firstItem="OxK-po-kDs" firstAttribute="leading" secondItem="xVQ-sO-gKJ" secondAttribute="leading" id="NOD-JG-ue1"/>
+                <constraint firstAttribute="bottom" secondItem="OxK-po-kDs" secondAttribute="bottom" id="iep-Nt-diF"/>
+                <constraint firstItem="OxK-po-kDs" firstAttribute="top" secondItem="xVQ-sO-gKJ" secondAttribute="top" id="rMD-bp-zTV"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="pZH-uC-iO6"/>
+            <point key="canvasLocation" x="120" y="-140.32983508245877"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_search_purple" width="21" height="22"/>
+    </resources>
+</document>
