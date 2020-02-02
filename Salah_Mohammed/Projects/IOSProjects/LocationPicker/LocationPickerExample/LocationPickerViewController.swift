@@ -48,6 +48,14 @@ open class LocationPickerViewController: UIViewController {
     enum ActionType {
      case center
      case click
+        var title:String{
+            switch self {
+            case .center:
+                return "center"
+            case .click:
+                return "click"
+            }
+        }
     }
     var actionType:ActionType = .click{
         didSet{
@@ -75,7 +83,8 @@ open class LocationPickerViewController: UIViewController {
     @IBOutlet private weak var activityIndicatorView: UIActivityIndicatorView!
     
     @IBOutlet private weak var searchView: SearchView!
-    
+    @IBOutlet private weak var segmentedControlActionType: UISegmentedControl!
+
     fileprivate var pointAnnotation: MKPointAnnotation!
     fileprivate let locationManager: CLLocationManager = CLLocationManager()
     var tapGesture:UITapGestureRecognizer?
@@ -116,12 +125,22 @@ open class LocationPickerViewController: UIViewController {
         self.btnDone.isHidden=true;
         let actionType:ActionType = self.actionType;
         self.actionType=actionType;
+        self.segmentedControlActionType.setTitle(ActionType.click.title, forSegmentAt:0);
+        self.segmentedControlActionType.setTitle(ActionType.center.title, forSegmentAt:1);
+
     }
     open override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews();
         self.headerViewHeight(UIScreen.main.bounds.height*0.72);
     }
-    
+    @IBAction private func segmentedControlActionType(_ sender: Any) {
+        if segmentedControlActionType.selectedSegmentIndex == 0 {
+            self.actionType = .click;
+        }
+        else if segmentedControlActionType.selectedSegmentIndex == 1{
+            self.actionType = .center;
+        }
+    }
     @IBAction private func btnCancel(_ sender: Any) {
     self.dismiss(animated: true, completion: {
     self.cancel?();

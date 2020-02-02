@@ -128,14 +128,26 @@
                                                 <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="pzK-mU-5sz">
                                                     <rect key="frame" x="188.5" y="75" width="37" height="37"/>
                                                 </activityIndicatorView>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="uFR-2G-zjF">
+                                                    <rect key="frame" x="141.5" y="5" width="131" height="32"/>
+                                                    <segments>
+                                                        <segment title="First"/>
+                                                        <segment title="Second"/>
+                                                    </segments>
+                                                    <connections>
+                                                        <action selector="segmentedControlActionType:" destination="ns3-8N-C0o" eventType="valueChanged" id="Qez-Lc-S8c"/>
+                                                    </connections>
+                                                </segmentedControl>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             <constraints>
+                                                <constraint firstItem="uFR-2G-zjF" firstAttribute="centerX" secondItem="acp-gP-esj" secondAttribute="centerX" id="CXN-Z2-CKw"/>
                                                 <constraint firstItem="Kls-oJ-way" firstAttribute="top" secondItem="acp-gP-esj" secondAttribute="top" id="E8O-HC-sx2"/>
                                                 <constraint firstAttribute="bottom" secondItem="Kls-oJ-way" secondAttribute="bottom" id="Jml-gL-8Wa"/>
                                                 <constraint firstItem="Kls-oJ-way" firstAttribute="leading" secondItem="acp-gP-esj" secondAttribute="leading" id="KSL-wO-sLz"/>
                                                 <constraint firstAttribute="trailing" secondItem="Kls-oJ-way" secondAttribute="trailing" id="Nzk-ki-sdm"/>
                                                 <constraint firstAttribute="bottom" secondItem="pzK-mU-5sz" secondAttribute="bottom" constant="16" id="Qz6-2T-iw1"/>
+                                                <constraint firstItem="uFR-2G-zjF" firstAttribute="top" secondItem="acp-gP-esj" secondAttribute="top" constant="5" id="wKV-T2-xEI"/>
                                                 <constraint firstItem="pzK-mU-5sz" firstAttribute="centerX" secondItem="acp-gP-esj" secondAttribute="centerX" id="wdl-0q-NUe"/>
                                             </constraints>
                                         </view>
@@ -217,6 +229,7 @@
                         <outlet property="btnDone" destination="KCJ-r3-ryf" id="Gjr-dB-KDc"/>
                         <outlet property="mapView" destination="Kls-oJ-way" id="P3N-PL-pou"/>
                         <outlet property="searchView" destination="KZZ-13-ize" id="2T9-3D-b5m"/>
+                        <outlet property="segmentedControlActionType" destination="uFR-2G-zjF" id="Eg0-qe-aNV"/>
                         <outlet property="tableView" destination="zmB-2B-gWz" id="zD3-bw-D55"/>
                     </connections>
                 </viewController>
