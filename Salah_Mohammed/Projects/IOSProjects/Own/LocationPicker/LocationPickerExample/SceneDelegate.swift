@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  LocationPickeerExample
+//  LocationPickerExample
 //
-//  Created by Salah on 1/21/20.
+//  Created by Salah on 2/2/20.
 //  Copyright © 2020 Salah. All rights reserved.
 //
 

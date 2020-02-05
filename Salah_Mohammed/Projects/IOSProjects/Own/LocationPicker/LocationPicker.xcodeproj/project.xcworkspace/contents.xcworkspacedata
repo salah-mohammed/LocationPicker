@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/salah/Salah_Mohammed/Projects/IOSProjects/Own/LocationPicker/LocationPicker.xcodeproj">
+      location = "self:LocationPicker.xcodeproj">
    </FileRef>
 </Workspace>

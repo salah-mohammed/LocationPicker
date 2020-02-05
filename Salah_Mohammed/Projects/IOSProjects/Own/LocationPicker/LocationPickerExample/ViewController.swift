@@ -7,7 +7,8 @@
 //
 
 import UIKit
-import LocationPickeer
+import MapKit
+import CoreLocation
 class ViewController: UIViewController {
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var btnPresent: UIButton!
@@ -17,7 +18,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func btnPresent(_ sender: Any) {
-        if let vc:LocationPickerViewController = LocationPickerViewController.initPicker(){
+        if let vc:LocationPickerViewController = LocationPickerViewController.initPicker(LocationItem.init(location:CLLocationCoordinate2D.init(latitude:31.210566, longitude:29.912188), title:"", subtitle:""), nil){
             vc.success={ (object,doneButton) in
                 if doneButton {
                     vc.dismiss(animated: true, completion: nil);
@@ -29,7 +30,8 @@ class ViewController: UIViewController {
             vc.cancel={
                 vc.dismiss(animated: true, completion: nil);
             }
-            self.present(vc, animated: true, completion: nil);
+          //  self.present(vc, animated: true, completion: nil);
+            self.navigationController?.pushViewController(vc, animated: true);
         }
     }
 }

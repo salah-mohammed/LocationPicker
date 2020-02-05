@@ -7,48 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4E3A809C23E4A145009D77C2 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3A809A23E4A145009D77C2 /* SearchView.swift */; };
-		4E3A809D23E4A145009D77C2 /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E3A809B23E4A145009D77C2 /* SearchView.xib */; };
-		4E4658FB23D854FF00ADB204 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E4658FA23D854FF00ADB204 /* Main.storyboard */; };
-		4ED1E71423E2599300CD99BC /* LocationPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED1E71223E2599200CD99BC /* LocationPickerViewController.swift */; };
-		4ED1E71523E2599300CD99BC /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED1E71323E2599300CD99BC /* LocationTableViewCell.swift */; };
-		4EF314CA23D6E65E005CCAF5 /* LocationPickeer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EF314C823D6E65E005CCAF5 /* LocationPickeer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4EF314D723D6E67D005CCAF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF314D623D6E67D005CCAF5 /* AppDelegate.swift */; };
-		4EF314D923D6E67D005CCAF5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF314D823D6E67D005CCAF5 /* SceneDelegate.swift */; };
-		4EF314DB23D6E67D005CCAF5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF314DA23D6E67D005CCAF5 /* ViewController.swift */; };
-		4EF314DE23D6E67D005CCAF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EF314DC23D6E67D005CCAF5 /* Main.storyboard */; };
-		4EF314E023D6E67E005CCAF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EF314DF23D6E67E005CCAF5 /* Assets.xcassets */; };
-		4EF314E323D6E67E005CCAF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EF314E123D6E67E005CCAF5 /* LaunchScreen.storyboard */; };
+		4E2B5A2023E7513000CFF3EC /* LocationPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E2B5A1E23E7513000CFF3EC /* LocationPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4E2B5A2D23E7514500CFF3EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B5A2C23E7514500CFF3EC /* AppDelegate.swift */; };
+		4E2B5A2F23E7514500CFF3EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B5A2E23E7514500CFF3EC /* SceneDelegate.swift */; };
+		4E2B5A3123E7514500CFF3EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B5A3023E7514500CFF3EC /* ViewController.swift */; };
+		4E2B5A3423E7514500CFF3EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E2B5A3223E7514500CFF3EC /* Main.storyboard */; };
+		4E2B5A3623E7514800CFF3EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E2B5A3523E7514800CFF3EC /* Assets.xcassets */; };
+		4E2B5A3923E7514800CFF3EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E2B5A3723E7514800CFF3EC /* LaunchScreen.storyboard */; };
+		4E2B5A4323E7518800CFF3EC /* LocationPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B5A3E23E7518700CFF3EC /* LocationPickerViewController.swift */; };
+		4E2B5A4423E7518800CFF3EC /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B5A3F23E7518700CFF3EC /* LocationTableViewCell.swift */; };
+		4E2B5A4523E7518800CFF3EC /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B5A4123E7518800CFF3EC /* SearchView.swift */; };
+		4E2B5A4623E7518800CFF3EC /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E2B5A4223E7518800CFF3EC /* SearchView.xib */; };
+		4EA63F4B23EA2B270010A6AF /* Location.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4EA63F4A23EA2B270010A6AF /* Location.gpx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4E3A809A23E4A145009D77C2 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
-		4E3A809B23E4A145009D77C2 /* SearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchView.xib; sourceTree = "<group>"; };
-		4E4658FA23D854FF00ADB204 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		4ED1E71223E2599200CD99BC /* LocationPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationPickerViewController.swift; sourceTree = "<group>"; };
-		4ED1E71323E2599300CD99BC /* LocationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTableViewCell.swift; sourceTree = "<group>"; };
-		4EF314C523D6E65E005CCAF5 /* LocationPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LocationPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4EF314C823D6E65E005CCAF5 /* LocationPickeer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationPickeer.h; sourceTree = "<group>"; };
-		4EF314C923D6E65E005CCAF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4EF314D423D6E67D005CCAF5 /* LocationPickerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocationPickerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4EF314D623D6E67D005CCAF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4EF314D823D6E67D005CCAF5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4EF314DA23D6E67D005CCAF5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4EF314DD23D6E67D005CCAF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4EF314DF23D6E67E005CCAF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4EF314E223D6E67E005CCAF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		4EF314E423D6E67E005CCAF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E2B5A1B23E7513000CFF3EC /* LocationPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LocationPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E2B5A1E23E7513000CFF3EC /* LocationPicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationPicker.h; sourceTree = "<group>"; };
+		4E2B5A1F23E7513000CFF3EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E2B5A2A23E7514500CFF3EC /* LocationPickerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocationPickerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E2B5A2C23E7514500CFF3EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4E2B5A2E23E7514500CFF3EC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4E2B5A3023E7514500CFF3EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4E2B5A3323E7514500CFF3EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4E2B5A3523E7514800CFF3EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4E2B5A3823E7514800CFF3EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4E2B5A3A23E7514800CFF3EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E2B5A3E23E7518700CFF3EC /* LocationPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationPickerViewController.swift; sourceTree = "<group>"; };
+		4E2B5A3F23E7518700CFF3EC /* LocationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTableViewCell.swift; sourceTree = "<group>"; };
+		4E2B5A4123E7518800CFF3EC /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		4E2B5A4223E7518800CFF3EC /* SearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchView.xib; sourceTree = "<group>"; };
+		4EA63F4A23EA2B270010A6AF /* Location.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4EF314C223D6E65E005CCAF5 /* Frameworks */ = {
+		4E2B5A1823E7513000CFF3EC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4EF314D123D6E67D005CCAF5 /* Frameworks */ = {
+		4E2B5A2723E7514500CFF3EC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -58,129 +58,128 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4E3A809923E4A145009D77C2 /* SearchView */ = {
+		4E2B5A1123E7513000CFF3EC = {
 			isa = PBXGroup;
 			children = (
-				4E3A809A23E4A145009D77C2 /* SearchView.swift */,
-				4E3A809B23E4A145009D77C2 /* SearchView.xib */,
-			);
-			path = SearchView;
-			sourceTree = "<group>";
-		};
-		4EF314BB23D6E65E005CCAF5 = {
-			isa = PBXGroup;
-			children = (
-				4EF314C723D6E65E005CCAF5 /* LocationPicker */,
-				4EF314D523D6E67D005CCAF5 /* LocationPickerExample */,
-				4EF314C623D6E65E005CCAF5 /* Products */,
+				4E2B5A1D23E7513000CFF3EC /* LocationPicker */,
+				4E2B5A2B23E7514500CFF3EC /* LocationPickerExample */,
+				4E2B5A1C23E7513000CFF3EC /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		4EF314C623D6E65E005CCAF5 /* Products */ = {
+		4E2B5A1C23E7513000CFF3EC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4EF314C523D6E65E005CCAF5 /* LocationPicker.framework */,
-				4EF314D423D6E67D005CCAF5 /* LocationPickerExample.app */,
+				4E2B5A1B23E7513000CFF3EC /* LocationPicker.framework */,
+				4E2B5A2A23E7514500CFF3EC /* LocationPickerExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4EF314C723D6E65E005CCAF5 /* LocationPicker */ = {
+		4E2B5A1D23E7513000CFF3EC /* LocationPicker */ = {
 			isa = PBXGroup;
 			children = (
-				4EF314C823D6E65E005CCAF5 /* LocationPickeer.h */,
-				4EF314C923D6E65E005CCAF5 /* Info.plist */,
-				4E4658FA23D854FF00ADB204 /* Main.storyboard */,
+				4E2B5A1E23E7513000CFF3EC /* LocationPicker.h */,
+				4E2B5A1F23E7513000CFF3EC /* Info.plist */,
 			);
 			path = LocationPicker;
 			sourceTree = "<group>";
 		};
-		4EF314D523D6E67D005CCAF5 /* LocationPickerExample */ = {
+		4E2B5A2B23E7514500CFF3EC /* LocationPickerExample */ = {
 			isa = PBXGroup;
 			children = (
-				4EF314D623D6E67D005CCAF5 /* AppDelegate.swift */,
-				4EF314D823D6E67D005CCAF5 /* SceneDelegate.swift */,
-				4E3A809923E4A145009D77C2 /* SearchView */,
-				4EF314DA23D6E67D005CCAF5 /* ViewController.swift */,
-				4ED1E71223E2599200CD99BC /* LocationPickerViewController.swift */,
-				4ED1E71323E2599300CD99BC /* LocationTableViewCell.swift */,
-				4EF314DC23D6E67D005CCAF5 /* Main.storyboard */,
-				4EF314DF23D6E67E005CCAF5 /* Assets.xcassets */,
-				4EF314E123D6E67E005CCAF5 /* LaunchScreen.storyboard */,
-				4EF314E423D6E67E005CCAF5 /* Info.plist */,
+				4E2B5A2C23E7514500CFF3EC /* AppDelegate.swift */,
+				4E2B5A3E23E7518700CFF3EC /* LocationPickerViewController.swift */,
+				4E2B5A3F23E7518700CFF3EC /* LocationTableViewCell.swift */,
+				4E2B5A4023E7518800CFF3EC /* SearchView */,
+				4E2B5A2E23E7514500CFF3EC /* SceneDelegate.swift */,
+				4E2B5A3023E7514500CFF3EC /* ViewController.swift */,
+				4EA63F4A23EA2B270010A6AF /* Location.gpx */,
+				4E2B5A3223E7514500CFF3EC /* Main.storyboard */,
+				4E2B5A3523E7514800CFF3EC /* Assets.xcassets */,
+				4E2B5A3723E7514800CFF3EC /* LaunchScreen.storyboard */,
+				4E2B5A3A23E7514800CFF3EC /* Info.plist */,
 			);
 			path = LocationPickerExample;
+			sourceTree = "<group>";
+		};
+		4E2B5A4023E7518800CFF3EC /* SearchView */ = {
+			isa = PBXGroup;
+			children = (
+				4E2B5A4123E7518800CFF3EC /* SearchView.swift */,
+				4E2B5A4223E7518800CFF3EC /* SearchView.xib */,
+			);
+			path = SearchView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		4EF314C023D6E65E005CCAF5 /* Headers */ = {
+		4E2B5A1623E7513000CFF3EC /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EF314CA23D6E65E005CCAF5 /* LocationPickeer.h in Headers */,
+				4E2B5A2023E7513000CFF3EC /* LocationPicker.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		4EF314C423D6E65E005CCAF5 /* LocationPicker */ = {
+		4E2B5A1A23E7513000CFF3EC /* LocationPicker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4EF314CD23D6E65E005CCAF5 /* Build configuration list for PBXNativeTarget "LocationPicker" */;
+			buildConfigurationList = 4E2B5A2323E7513000CFF3EC /* Build configuration list for PBXNativeTarget "LocationPicker" */;
 			buildPhases = (
-				4EF314C023D6E65E005CCAF5 /* Headers */,
-				4EF314C123D6E65E005CCAF5 /* Sources */,
-				4EF314C223D6E65E005CCAF5 /* Frameworks */,
-				4EF314C323D6E65E005CCAF5 /* Resources */,
+				4E2B5A1623E7513000CFF3EC /* Headers */,
+				4E2B5A1723E7513000CFF3EC /* Sources */,
+				4E2B5A1823E7513000CFF3EC /* Frameworks */,
+				4E2B5A1923E7513000CFF3EC /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = LocationPicker;
-			productName = LocationPickeer;
-			productReference = 4EF314C523D6E65E005CCAF5 /* LocationPicker.framework */;
+			productName = LocationPicker;
+			productReference = 4E2B5A1B23E7513000CFF3EC /* LocationPicker.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		4EF314D323D6E67D005CCAF5 /* LocationPickerExample */ = {
+		4E2B5A2923E7514500CFF3EC /* LocationPickerExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4EF314E523D6E67E005CCAF5 /* Build configuration list for PBXNativeTarget "LocationPickerExample" */;
+			buildConfigurationList = 4E2B5A3B23E7514800CFF3EC /* Build configuration list for PBXNativeTarget "LocationPickerExample" */;
 			buildPhases = (
-				4EF314D023D6E67D005CCAF5 /* Sources */,
-				4EF314D123D6E67D005CCAF5 /* Frameworks */,
-				4EF314D223D6E67D005CCAF5 /* Resources */,
+				4E2B5A2623E7514500CFF3EC /* Sources */,
+				4E2B5A2723E7514500CFF3EC /* Frameworks */,
+				4E2B5A2823E7514500CFF3EC /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = LocationPickerExample;
-			productName = LocationPickeerExample;
-			productReference = 4EF314D423D6E67D005CCAF5 /* LocationPickerExample.app */;
+			productName = LocationPickerExample;
+			productReference = 4E2B5A2A23E7514500CFF3EC /* LocationPickerExample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		4EF314BC23D6E65E005CCAF5 /* Project object */ = {
+		4E2B5A1223E7513000CFF3EC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = Salah;
 				TargetAttributes = {
-					4EF314C423D6E65E005CCAF5 = {
+					4E2B5A1A23E7513000CFF3EC = {
 						CreatedOnToolsVersion = 11.3;
-						LastSwiftMigration = 1130;
 					};
-					4EF314D323D6E67D005CCAF5 = {
+					4E2B5A2923E7514500CFF3EC = {
 						CreatedOnToolsVersion = 11.3;
 					};
 				};
 			};
-			buildConfigurationList = 4EF314BF23D6E65E005CCAF5 /* Build configuration list for PBXProject "LocationPicker" */;
+			buildConfigurationList = 4E2B5A1523E7513000CFF3EC /* Build configuration list for PBXProject "LocationPicker" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -188,75 +187,75 @@
 				en,
 				Base,
 			);
-			mainGroup = 4EF314BB23D6E65E005CCAF5;
-			productRefGroup = 4EF314C623D6E65E005CCAF5 /* Products */;
+			mainGroup = 4E2B5A1123E7513000CFF3EC;
+			productRefGroup = 4E2B5A1C23E7513000CFF3EC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4EF314C423D6E65E005CCAF5 /* LocationPicker */,
-				4EF314D323D6E67D005CCAF5 /* LocationPickerExample */,
+				4E2B5A1A23E7513000CFF3EC /* LocationPicker */,
+				4E2B5A2923E7514500CFF3EC /* LocationPickerExample */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4EF314C323D6E65E005CCAF5 /* Resources */ = {
+		4E2B5A1923E7513000CFF3EC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E4658FB23D854FF00ADB204 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4EF314D223D6E67D005CCAF5 /* Resources */ = {
+		4E2B5A2823E7514500CFF3EC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E3A809D23E4A145009D77C2 /* SearchView.xib in Resources */,
-				4EF314E323D6E67E005CCAF5 /* LaunchScreen.storyboard in Resources */,
-				4EF314E023D6E67E005CCAF5 /* Assets.xcassets in Resources */,
-				4EF314DE23D6E67D005CCAF5 /* Main.storyboard in Resources */,
+				4E2B5A4623E7518800CFF3EC /* SearchView.xib in Resources */,
+				4E2B5A3923E7514800CFF3EC /* LaunchScreen.storyboard in Resources */,
+				4EA63F4B23EA2B270010A6AF /* Location.gpx in Resources */,
+				4E2B5A3623E7514800CFF3EC /* Assets.xcassets in Resources */,
+				4E2B5A3423E7514500CFF3EC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4EF314C123D6E65E005CCAF5 /* Sources */ = {
+		4E2B5A1723E7513000CFF3EC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4EF314D023D6E67D005CCAF5 /* Sources */ = {
+		4E2B5A2623E7514500CFF3EC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EF314DB23D6E67D005CCAF5 /* ViewController.swift in Sources */,
-				4ED1E71523E2599300CD99BC /* LocationTableViewCell.swift in Sources */,
-				4EF314D723D6E67D005CCAF5 /* AppDelegate.swift in Sources */,
-				4EF314D923D6E67D005CCAF5 /* SceneDelegate.swift in Sources */,
-				4E3A809C23E4A145009D77C2 /* SearchView.swift in Sources */,
-				4ED1E71423E2599300CD99BC /* LocationPickerViewController.swift in Sources */,
+				4E2B5A3123E7514500CFF3EC /* ViewController.swift in Sources */,
+				4E2B5A4423E7518800CFF3EC /* LocationTableViewCell.swift in Sources */,
+				4E2B5A2D23E7514500CFF3EC /* AppDelegate.swift in Sources */,
+				4E2B5A2F23E7514500CFF3EC /* SceneDelegate.swift in Sources */,
+				4E2B5A4523E7518800CFF3EC /* SearchView.swift in Sources */,
+				4E2B5A4323E7518800CFF3EC /* LocationPickerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4EF314DC23D6E67D005CCAF5 /* Main.storyboard */ = {
+		4E2B5A3223E7514500CFF3EC /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4EF314DD23D6E67D005CCAF5 /* Base */,
+				4E2B5A3323E7514500CFF3EC /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		4EF314E123D6E67E005CCAF5 /* LaunchScreen.storyboard */ = {
+		4E2B5A3723E7514800CFF3EC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4EF314E223D6E67E005CCAF5 /* Base */,
+				4E2B5A3823E7514800CFF3EC /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -264,7 +263,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		4EF314CB23D6E65E005CCAF5 /* Debug */ = {
+		4E2B5A2123E7513000CFF3EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -327,7 +326,7 @@
 			};
 			name = Debug;
 		};
-		4EF314CC23D6E65E005CCAF5 /* Release */ = {
+		4E2B5A2223E7513000CFF3EC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -384,50 +383,47 @@
 			};
 			name = Release;
 		};
-		4EF314CE23D6E65E005CCAF5 /* Debug */ = {
+		4E2B5A2423E7513000CFF3EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 8C7RSZ7C3V;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = LocationPickeer/Info.plist;
+				INFOPLIST_FILE = LocationPicker/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.salahmohamed.LocationPickeer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.salahmohamed.LocationPicker;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		4EF314CF23D6E65E005CCAF5 /* Release */ = {
+		4E2B5A2523E7513000CFF3EC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 8C7RSZ7C3V;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = LocationPickeer/Info.plist;
+				INFOPLIST_FILE = LocationPicker/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.salahmohamed.LocationPickeer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.salahmohamed.LocationPicker;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -435,36 +431,36 @@
 			};
 			name = Release;
 		};
-		4EF314E623D6E67E005CCAF5 /* Debug */ = {
+		4E2B5A3C23E7514800CFF3EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8C7RSZ7C3V;
-				INFOPLIST_FILE = LocationPickeerExample/Info.plist;
+				INFOPLIST_FILE = LocationPickerExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.salahmohamed.LocationPickeerExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.salahmohamed.LocationPickerExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		4EF314E723D6E67E005CCAF5 /* Release */ = {
+		4E2B5A3D23E7514800CFF3EC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8C7RSZ7C3V;
-				INFOPLIST_FILE = LocationPickeerExample/Info.plist;
+				INFOPLIST_FILE = LocationPickerExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.salahmohamed.LocationPickeerExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.salahmohamed.LocationPickerExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -474,34 +470,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4EF314BF23D6E65E005CCAF5 /* Build configuration list for PBXProject "LocationPicker" */ = {
+		4E2B5A1523E7513000CFF3EC /* Build configuration list for PBXProject "LocationPicker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4EF314CB23D6E65E005CCAF5 /* Debug */,
-				4EF314CC23D6E65E005CCAF5 /* Release */,
+				4E2B5A2123E7513000CFF3EC /* Debug */,
+				4E2B5A2223E7513000CFF3EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4EF314CD23D6E65E005CCAF5 /* Build configuration list for PBXNativeTarget "LocationPicker" */ = {
+		4E2B5A2323E7513000CFF3EC /* Build configuration list for PBXNativeTarget "LocationPicker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4EF314CE23D6E65E005CCAF5 /* Debug */,
-				4EF314CF23D6E65E005CCAF5 /* Release */,
+				4E2B5A2423E7513000CFF3EC /* Debug */,
+				4E2B5A2523E7513000CFF3EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4EF314E523D6E67E005CCAF5 /* Build configuration list for PBXNativeTarget "LocationPickerExample" */ = {
+		4E2B5A3B23E7514800CFF3EC /* Build configuration list for PBXNativeTarget "LocationPickerExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4EF314E623D6E67E005CCAF5 /* Debug */,
-				4EF314E723D6E67E005CCAF5 /* Release */,
+				4E2B5A3C23E7514800CFF3EC /* Debug */,
+				4E2B5A3D23E7514800CFF3EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 4EF314BC23D6E65E005CCAF5 /* Project object */;
+	rootObject = 4E2B5A1223E7513000CFF3EC /* Project object */;
 }

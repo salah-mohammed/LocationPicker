@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  LocationPickeerExample
+//  LocationPickerExample
 //
-//  Created by Salah on 1/21/20.
+//  Created by Salah on 2/2/20.
 //  Copyright © 2020 Salah. All rights reserved.
 //
 
@@ -10,6 +10,8 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+
+//    <wpt lat="31.210566" lon="29.912188">
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {

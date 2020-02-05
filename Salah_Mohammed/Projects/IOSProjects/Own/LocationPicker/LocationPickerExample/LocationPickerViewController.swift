@@ -44,6 +44,44 @@ open class LocationItem:NSObject {
     }
 }
 open class LocationPickerViewController: UIViewController {
+    var span:MKCoordinateSpan = MKCoordinateSpan.init(latitudeDelta: 0.005, longitudeDelta: 0.005)
+    private var userLocation:LocationItem?{
+        if let coordinate:CLLocationCoordinate2D = self.mapView.userLocation.location?.coordinate{
+            return  LocationItem.init(location:coordinate, title:"Current Location", subtitle:self.mapView.userLocation.location?.coordinate.locationDescription ?? "")
+        }
+        return nil;
+    }
+    enum ActionType {
+     case center
+     case click
+        var title:String{
+            switch self {
+            case .center:
+                return "center"
+            case .click:
+                return "click"
+            }
+        }
+    }
+    var actionType:ActionType = .click{
+        didSet{
+            if self.actionType == .click {
+                if tapGesture == nil {
+            self.tapGesture = UITapGestureRecognizer(target: self, action: #selector(longTap))
+                mapView.addGestureRecognizer(self.tapGesture!)
+            }
+            }else
+            if self.actionType == .center {
+                if let tapGesture:UITapGestureRecognizer = self.tapGesture{
+                    self.mapView.removeGestureRecognizer(tapGesture);
+                    self.tapGesture=nil;
+                    if let coordinate:CLLocationCoordinate2D = self.pointAnnotation?.coordinate  {
+                        self.setRegion(coordinate);
+                    }
+                }
+            }
+        }
+    }
     public typealias successClosure = (LocationItem,Bool) -> Void
     public typealias failureClosure = (NSError) -> Void
     public typealias cancelClosure = () -> Void
@@ -55,28 +93,36 @@ open class LocationPickerViewController: UIViewController {
     @IBOutlet private weak var activityIndicatorView: UIActivityIndicatorView!
     
     @IBOutlet private weak var searchView: SearchView!
-    
-    fileprivate var pointAnnotation: MKPointAnnotation!
+    @IBOutlet private weak var segmentedControlActionType: UISegmentedControl!
+
+    fileprivate var pointAnnotation: MKPointAnnotation?
     fileprivate let locationManager: CLLocationManager = CLLocationManager()
+    var tapGesture:UITapGestureRecognizer?
     open var success: successClosure?
     open var failure: failureClosure?
     open var cancel: cancelClosure?
     fileprivate var isInitialized = false
     var searchMode:Bool=false;
     var objects:[LocationType]=[LocationType]();
-    var currentLocation:LocationItem?{
-        if let coordinate:CLLocationCoordinate2D = self.mapView.userLocation.location?.coordinate{
-            return  LocationItem.init(location:coordinate, title:"Current Location", subtitle:self.mapView.userLocation.location?.coordinate.locationDescription ?? "")
+
+    private var selectedLocation:LocationItem?{
+        didSet{
+            if self.isViewLoaded{
+            if let selectedLocation:LocationItem=self.selectedLocation,let cordinate:CLLocationCoordinate2D = selectedLocation.location{
+            self.setRegion(cordinate)
+            self.addAnotaion(cordinate)
+                nearlyPlace(self.searchView.text);
+            }
+            }
         }
-        return nil;
     }
-    
     open override func viewDidLoad() {
         super.viewDidLoad();
-        let doneButtonItem = UIBarButtonItem(barButtonSystemItem: .done,
+      /*  let doneButtonItem = UIBarButtonItem(barButtonSystemItem: .done,
                                              target: self,
                                              action: #selector(LocationPickerViewController.didTapDoneButton))
-        self.navigationItem.rightBarButtonItem = doneButtonItem
+ */
+  //      self.navigationItem.rightBarButtonItem = doneButtonItem
         self.locationManager.delegate = self
         self.locationManager.startUpdatingLocation()
         self.tableView.delegate = self
@@ -93,12 +139,27 @@ open class LocationPickerViewController: UIViewController {
             self.searchMode=true;
         }
         self.btnDone.isHidden=true;
+        let actionType:ActionType = self.actionType;
+        self.actionType=actionType;
+        self.segmentedControlActionType.setTitle(ActionType.click.title, forSegmentAt:0);
+        self.segmentedControlActionType.setTitle(ActionType.center.title, forSegmentAt:1);
+       
+        if let selectedLocation:LocationItem=self.selectedLocation{
+            self.selectedLocation=selectedLocation;
+        }
     }
     open override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews();
         self.headerViewHeight(UIScreen.main.bounds.height*0.72);
     }
-    
+    @IBAction private func segmentedControlActionType(_ sender: Any) {
+        if segmentedControlActionType.selectedSegmentIndex == 0 {
+            self.actionType = .click;
+        }
+        else if segmentedControlActionType.selectedSegmentIndex == 1{
+            self.actionType = .center;
+        }
+    }
     @IBAction private func btnCancel(_ sender: Any) {
     self.dismiss(animated: true, completion: {
     self.cancel?();
@@ -107,9 +168,14 @@ open class LocationPickerViewController: UIViewController {
     @IBAction private func btnDone(_ sender: Any) {
         didTapDoneButton(doneButton:true);
     }
-    public static func initPicker()->LocationPickerViewController?{
+    public static func initPicker(_ selectedLocation:LocationItem?=nil,_ span:MKCoordinateSpan?=nil)->LocationPickerViewController?{
             let storyboard = UIStoryboard(name: "Main",bundle: Bundle.init(for:LocationPickerViewController.self));
-        return storyboard.instantiateViewController(withIdentifier:"LocationPickerViewController") as? LocationPickerViewController;
+            let  vc = storyboard.instantiateViewController(withIdentifier:"LocationPickerViewController") as? LocationPickerViewController;
+        vc?.selectedLocation=selectedLocation;
+        if let span:MKCoordinateSpan=span{
+        vc?.span = span;
+        }
+        return vc;
     }
 }
 internal extension LocationPickerViewController {
@@ -134,56 +200,71 @@ internal extension LocationPickerViewController {
 // MARK: - MKMapView delegate
 
 extension LocationPickerViewController: MKMapViewDelegate {
-
-    public func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
-        guard self.isInitialized else {
-            return
-        }
-        self.pointAnnotation.coordinate = mapView.region.center
+    func updateCoordinate(_ refreshPlaces:Bool){
+        if self.actionType == .click {
+            
+        }else
+        if self.actionType == .center {
+        self.pointAnnotation?.coordinate = mapView.region.center
+            if refreshPlaces {
         self.nearlyPlace(self.searchView.text);
+            }
+        }
+    }
+    public func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+        updateCoordinate(true);
     }
     public func mapViewDidChangeVisibleRegion(_ mapView: MKMapView) {
-        guard self.isInitialized else {
-                   return
-               }
-               self.pointAnnotation.coordinate = mapView.region.center
+       updateCoordinate(false);
     }
     public func mapView(_ mapView: MKMapView, regionWillChangeAnimated animated: Bool) {
-        guard self.isInitialized else {
-                   return
-               }
-               self.pointAnnotation.coordinate = mapView.region.center
-    }
-    public func mapView(_ mapView: MKMapView, didChange mode: MKUserTrackingMode, animated: Bool){
-    self.btnDone.isHidden=false;
-        if self.searchMode == false {
-            self.nearlyPlace(self.searchView.text);
-        }
     }
     public func mapViewWillStartLoadingMap(_ mapView: MKMapView){
     self.activityIndicatorView.startAnimating();
+        if self.pointAnnotation?.coordinate == nil {
     self.btnDone.isHidden=true;
+        }
     }
     public func mapViewWillStartLocatingUser(_ mapView: MKMapView) {
     self.activityIndicatorView.startAnimating();
+        if self.pointAnnotation?.coordinate == nil {
     self.btnDone.isHidden=true;
+        }
     }
     public func mapViewDidFinishLoadingMap(_ mapView: MKMapView) {
     self.activityIndicatorView.stopAnimating();
+        if self.pointAnnotation?.coordinate == nil {
     self.btnDone.isHidden=true;
+        }
     }
 
     public func mapView(_ mapView: MKMapView, didFailToLocateUserWithError error: Error) {
         self.activityIndicatorView.stopAnimating();
     }
     public func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
-    self.btnDone.isHidden=false;
-    self.activityIndicatorView.stopAnimating();
-        if self.searchMode == false {
-        self.nearlyPlace(self.searchView.text);
-        }
+        self.activityIndicatorView.stopAnimating();
+//        if self.actionType == .center{
+//        self.btnDone.isHidden=false;
+//        if self.searchMode == false {
+//        self.nearlyPlace(self.searchView.text);
+//        }
+//        }else
+//        if self.actionType == .click{
+//
+//        }
+        
     }
+    public func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
 
+    }
+    @objc func longTap(sender: UIGestureRecognizer){
+            let locationInView = sender.location(in: mapView)
+            let locationOnMap = mapView.convert(locationInView, toCoordinateFrom: mapView)
+            self.pointAnnotation?.coordinate = locationOnMap
+            self.btnDone.isHidden=false;
+            self.nearlyPlace(self.searchView.text);
+
+    }
 }
 
 
@@ -203,21 +284,14 @@ extension LocationPickerViewController: CLLocationManagerDelegate {
     }
 
     public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let newLocation = locations.last, !self.isInitialized else {
+        guard let newLocation = locations.last, !self.isInitialized,self.selectedLocation == nil else {
             return
         }
-
+      
         self.locationManager.stopUpdatingLocation()
 
-        let centerCoordinate = CLLocationCoordinate2DMake(newLocation.coordinate.latitude, newLocation.coordinate.longitude)
-        let span = MKCoordinateSpan.init(latitudeDelta: 0.005, longitudeDelta: 0.005)
-        let region = MKCoordinateRegion(center: centerCoordinate, span: span)
-        self.mapView.setRegion(region, animated: true)
-
-        self.pointAnnotation = MKPointAnnotation()
-        self.pointAnnotation.coordinate = newLocation.coordinate
-        self.mapView.addAnnotation(self.pointAnnotation)
-
+        self.setRegion(newLocation.coordinate)
+        self.addAnotaion(newLocation.coordinate)
         self.isInitialized = true
     }
 }
@@ -249,13 +323,15 @@ extension LocationPickerViewController: UITableViewDelegate,UITableViewDataSourc
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
              switch objects[indexPath.row] {
              case .currentLocation:
-                if let currentLocation:LocationItem = self.currentLocation,let coordinate:CLLocationCoordinate2D = currentLocation.location{
+                if let currentLocation:LocationItem = self.userLocation,let coordinate:CLLocationCoordinate2D = currentLocation.location{
+                    self.pointAnnotation?.coordinate=coordinate;
                     self.mapView.setCenter(coordinate, animated: true)
                     self.didTapDoneButton(currentLocation,doneButton:false);
                     }
                 break;
              case .customeLocation(let location):
                 if let location:LocationItem = location,let coordinate:CLLocationCoordinate2D = location.location{
+                    self.pointAnnotation?.coordinate=coordinate;
                 self.mapView.setCenter(coordinate, animated: true)
                 }
                 self.didTapDoneButton(doneButton:false);
@@ -283,12 +359,18 @@ extension LocationPickerViewController{
         let localSearchRequest = MKLocalSearch.Request()
         localSearchRequest.naturalLanguageQuery = searchText
         localSearchRequest.resultTypes = [MKLocalSearch.ResultType.pointOfInterest,MKLocalSearch.ResultType.address]
-        localSearchRequest.region=self.mapView.region;
+        if self.actionType == .click , let pointAnnotation:MKPointAnnotation = pointAnnotation {
+            localSearchRequest.region=MKCoordinateRegion(center:pointAnnotation.coordinate, span: span)
+        }
+        else
+        if self.actionType == .center {
+           localSearchRequest.region=self.mapView.region;
+        }
         let localSearch = MKLocalSearch(request: localSearchRequest)
         localSearch.start { (response:MKLocalSearch.Response?, error) in
         self.objects.removeAll();
         self.activityIndicatorView.stopAnimating();
-            if let locationItem:LocationItem = self.currentLocation{
+            if let locationItem:LocationItem = self.userLocation{
                 self.objects.append(.currentLocation(locationItem));
             }
         if let mapItems:[MKMapItem] = response?.mapItems,mapItems.count >= 0  {
@@ -310,6 +392,20 @@ extension LocationPickerViewController{
         if let header = tableView.tableHeaderView {
              header.frame.size.height = height
          }
+    }
+    func addAnotaion(_ coordinate:CLLocationCoordinate2D){
+        if self.pointAnnotation == nil {
+        self.pointAnnotation = MKPointAnnotation()
+        }
+        self.pointAnnotation?.coordinate = coordinate
+        if let pointAnnotation:MKPointAnnotation = self.pointAnnotation{
+        self.mapView.addAnnotation(pointAnnotation)
+        }
+    }
+    func setRegion(_ coordinate:CLLocationCoordinate2D){
+        let centerCoordinate = CLLocationCoordinate2DMake(coordinate.latitude, coordinate.longitude)
+        let region = MKCoordinateRegion(center: centerCoordinate, span: span)
+        self.mapView.setRegion(region, animated: true)
     }
 }
 
