@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func btnPresent(_ sender: Any) {
-        if let vc:LocationPickerViewController = LocationPickerViewController.initPicker(LocationItem.init(location:CLLocationCoordinate2D.init(latitude:31.210566, longitude:29.912188), title:"", subtitle:""), nil){
+        if let vc:LocationPickerViewController = LocationPickerViewController.initPicker(LocationItem.init(location:CLLocationCoordinate2D.init(latitude:31.210566, longitude:29.912188), title:"", subtitle:"", type: nil), nil){
             vc.success={ (object,doneButton) in
                 if doneButton {
                     vc.dismiss(animated: true, completion: nil);

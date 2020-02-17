@@ -1,0 +1,27 @@
+
+/* Class = "UINavigationItem"; title = "Title"; ObjectID = "2Bx-XE-29Q"; */
+"2Bx-XE-29Q.title" = "Title";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "4tl-uK-94C"; */
+"4tl-uK-94C.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "KCJ-r3-ryf"; */
+"KCJ-r3-ryf.normalTitle" = "Done";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "Nov-Q1-mmS"; */
+"Nov-Q1-mmS.normalTitle" = "Cancel";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "PFd-w1-PTq"; */
+"PFd-w1-PTq.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "gfL-0X-L2C"; */
+"gfL-0X-L2C.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "juI-dX-5bY"; */
+"juI-dX-5bY.text" = "Label";
+
+/* Class = "UISegmentedControl"; uFR-2G-zjF.segmentTitles[0] = "First"; ObjectID = "uFR-2G-zjF"; */
+"uFR-2G-zjF.segmentTitles[0]" = "First";
+
+/* Class = "UISegmentedControl"; uFR-2G-zjF.segmentTitles[1] = "Second"; ObjectID = "uFR-2G-zjF"; */
+"uFR-2G-zjF.segmentTitles[1]" = "Second";
