@@ -183,7 +183,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nov-Q1-mmS">
-                                                        <rect key="frame" x="12" y="44" width="17.5" height="16"/>
+                                                        <rect key="frame" x="12" y="88" width="0.0" height="0.0"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="Nov-Q1-mmS" secondAttribute="height" multiplier="1.1:1" id="m8R-F8-dFK"/>
                                                         </constraints>
@@ -192,11 +192,11 @@
                                                             <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="btnCancel:" destination="ns3-8N-C0o" eventType="touchUpInside" id="d6E-dw-C1d"/>
+                                                            <action selector="btnPresentCancel:" destination="ns3-8N-C0o" eventType="touchUpInside" id="QMu-xf-Ks2"/>
                                                         </connections>
                                                     </button>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KZZ-13-ize" customClass="SearchView" customModule="LocationPickerExample" customModuleProvider="target">
-                                                        <rect key="frame" x="33.5" y="44" width="347" height="16"/>
+                                                        <rect key="frame" x="16" y="88" width="382" height="0.0"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="image" keyPath="searchIcon" value="ic_common.search"/>
@@ -204,7 +204,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KCJ-r3-ryf">
-                                                        <rect key="frame" x="384.5" y="44" width="17.5" height="16"/>
+                                                        <rect key="frame" x="402" y="88" width="0.0" height="0.0"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="KCJ-r3-ryf" secondAttribute="height" multiplier="1.1:1" id="hV1-Bm-rwr"/>
                                                         </constraints>
@@ -213,8 +213,7 @@
                                                             <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="btnCancel:" destination="ns3-8N-C0o" eventType="touchUpInside" id="jam-sd-zAA"/>
-                                                            <action selector="btnDone:" destination="ns3-8N-C0o" eventType="touchUpInside" id="8b9-zq-EuJ"/>
+                                                            <action selector="btnPresentDone:" destination="ns3-8N-C0o" eventType="touchUpInside" id="fRd-i2-DY9"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -342,11 +341,39 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2Pu-1Q-eNH"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="2Bx-XE-29Q"/>
+                    <navigationItem key="navigationItem" title="Title" id="2Bx-XE-29Q">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="KTl-Sq-NKr">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jdl-yI-o4M">
+                                <rect key="frame" x="20" y="7" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnNavCancel:" destination="ns3-8N-C0o" eventType="touchUpInside" id="0wE-Pc-d3U"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="I8h-j4-wTG">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ukL-8C-a9E">
+                                <rect key="frame" x="324" y="7" width="70" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnNavDone:" destination="ns3-8N-C0o" eventType="touchUpInside" id="lve-1r-lQ8"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="activityIndicatorView" destination="pzK-mU-5sz" id="eiT-I9-DIs"/>
-                        <outlet property="btnCancel" destination="Nov-Q1-mmS" id="EYc-0z-6AT"/>
-                        <outlet property="btnDone" destination="KCJ-r3-ryf" id="Gjr-dB-KDc"/>
+                        <outlet property="btnNavCancel" destination="jdl-yI-o4M" id="rbV-IH-FvP"/>
+                        <outlet property="btnNavDone" destination="ukL-8C-a9E" id="WVZ-pW-pMe"/>
+                        <outlet property="btnPresentCancel" destination="Nov-Q1-mmS" id="wla-V7-j9d"/>
+                        <outlet property="btnPresentDone" destination="KCJ-r3-ryf" id="7pe-Pb-lvx"/>
                         <outlet property="mapView" destination="Kls-oJ-way" id="P3N-PL-pou"/>
                         <outlet property="searchView" destination="KZZ-13-ize" id="2T9-3D-b5m"/>
                         <outlet property="segmentedControlActionType" destination="uFR-2G-zjF" id="Eg0-qe-aNV"/>

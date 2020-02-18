@@ -93,8 +93,24 @@ open class LocationPickerViewController: UIViewController {
     public typealias failureClosure = (NSError) -> Void
     public typealias cancelClosure = () -> Void
     
-    @IBOutlet private weak var btnDone: UIButton!
-    @IBOutlet private weak var btnCancel: UIButton!
+    var btnDone: UIButton!{
+        if self.navigationController == nil {
+            return self.btnPresentDone;
+        }else{
+            return self.btnNavDone;
+        }
+    }
+    var btnCancel: UIButton!{
+        if self.navigationController == nil {
+            return self.btnPresentCancel;
+        }else{
+            return self.btnNavCancel;
+        }
+    }
+    @IBOutlet private weak var btnPresentDone: UIButton!
+    @IBOutlet weak var btnNavDone: UIButton!
+    @IBOutlet private weak var btnPresentCancel: UIButton!
+    @IBOutlet private weak var btnNavCancel: UIButton!
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var mapView: MKMapView!
     @IBOutlet private weak var activityIndicatorView: UIActivityIndicatorView!
@@ -154,6 +170,9 @@ open class LocationPickerViewController: UIViewController {
         if let selectedLocation:LocationItem=self.selectedLocation{
             self.selectedLocation=selectedLocation;
         }
+        self.btnDone.setTitle("Done".localize_, for: .normal);
+        self.btnCancel.setTitle("Cancel".localize_, for: .normal);
+
     }
     open override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews();
@@ -167,13 +186,22 @@ open class LocationPickerViewController: UIViewController {
             self.actionType = .center;
         }
     }
-    @IBAction private func btnCancel(_ sender: Any) {
+    
+    @IBAction private func btnNavCancel(_ sender: Any) {
     self.dismiss(animated: true, completion: {
     self.cancel?();
     })
     }
-    @IBAction private func btnDone(_ sender: Any) {
-        didTapDoneButton(doneButton:true);
+    @IBAction private func btnPresentCancel(_ sender: Any) {
+    self.dismiss(animated: true, completion: {
+    self.cancel?();
+    })
+    }
+    @IBAction private func btnPresentDone(_ sender: Any) {
+    didTapDoneButton(doneButton:true);
+    }
+    @IBAction func btnNavDone(_ sender: Any) {
+    didTapDoneButton(doneButton:true);
     }
     public static func initPicker(_ selectedLocation:LocationItem?=nil,_ span:MKCoordinateSpan?=nil)->LocationPickerViewController?{
             let storyboard = UIStoryboard(name: "Main",bundle: Bundle.init(for:LocationPickerViewController.self));
