@@ -8,13 +8,13 @@
 
 import UIKit
 import MapKit
-open class LocationItem:NSObject {
-    var title:String?
-    var subtitle:String?
-    var location:CLLocationCoordinate2D?
-    var type:MKPointOfInterestCategory?
+public class LocationItem:NSObject {
+    public var title:String?
+    public var subtitle:String?
+    public var location:CLLocationCoordinate2D?
+    public var type:MKPointOfInterestCategory?
 
-    init(location:CLLocationCoordinate2D,title:String,subtitle:String,type:MKPointOfInterestCategory?) {
+    public init(location:CLLocationCoordinate2D,title:String,subtitle:String,type:MKPointOfInterestCategory?) {
         super.init()
         self.location = location;
         self.title = title;
