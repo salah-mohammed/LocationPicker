@@ -91,7 +91,6 @@
 				4E2B5A1E23E7513000CFF3EC /* LocationPicker.h */,
 				4E2B5A3E23E7518700CFF3EC /* LocationPickerViewController.swift */,
 				4E2B5A3F23E7518700CFF3EC /* LocationTableViewCell.swift */,
-				4E2B5A3223E7514500CFF3EC /* Main.storyboard */,
 				4E67020C23FC9BF900B3DE26 /* LocationPickerEx.swift */,
 				4E5027642477239400C59020 /* LocationItem.swift */,
 				4E2B5A4123E7518800CFF3EC /* SearchView.swift */,
@@ -118,6 +117,7 @@
 		4E502746247716BA00C59020 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4E2B5A3223E7514500CFF3EC /* Main.storyboard */,
 				4E2B5A4223E7518800CFF3EC /* SearchView.xib */,
 				4E502747247716BA00C59020 /* Info.plist */,
 			);
