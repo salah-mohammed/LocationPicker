@@ -15,12 +15,12 @@
 		4E2B5A3623E7514800CFF3EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E2B5A3523E7514800CFF3EC /* Assets.xcassets */; };
 		4E2B5A3923E7514800CFF3EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E2B5A3723E7514800CFF3EC /* LaunchScreen.storyboard */; };
 		4E3A8180247611810010131F /* LocationPickerEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E67020C23FC9BF900B3DE26 /* LocationPickerEx.swift */; };
-		4E3A81812476118C0010131F /* LocationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E67020E23FCA01700B3DE26 /* LocationItem.swift */; };
 		4E3A8182247611960010131F /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B5A3F23E7518700CFF3EC /* LocationTableViewCell.swift */; };
 		4E3A8183247611960010131F /* LocationPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B5A3E23E7518700CFF3EC /* LocationPickerViewController.swift */; };
 		4E3A8184247611BA0010131F /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B5A4123E7518800CFF3EC /* SearchView.swift */; };
 		4E3A8185247611BA0010131F /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E2B5A4223E7518800CFF3EC /* SearchView.xib */; };
 		4E502745247713D400C59020 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E2B5A3223E7514500CFF3EC /* Main.storyboard */; };
+		4E5027652477239400C59020 /* LocationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5027642477239400C59020 /* LocationItem.swift */; };
 		4EA63F4B23EA2B270010A6AF /* Location.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4EA63F4A23EA2B270010A6AF /* Location.gpx */; };
 /* End PBXBuildFile section */
 
@@ -43,8 +43,8 @@
 		4E2B5A4123E7518800CFF3EC /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		4E2B5A4223E7518800CFF3EC /* SearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchView.xib; sourceTree = "<group>"; };
 		4E502747247716BA00C59020 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E5027642477239400C59020 /* LocationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationItem.swift; sourceTree = "<group>"; };
 		4E67020C23FC9BF900B3DE26 /* LocationPickerEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPickerEx.swift; sourceTree = "<group>"; };
-		4E67020E23FCA01700B3DE26 /* LocationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationItem.swift; sourceTree = "<group>"; };
 		4EA63F4A23EA2B270010A6AF /* Location.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +72,7 @@
 				4E2B5A1D23E7513000CFF3EC /* LocationPicker */,
 				4E2B5A2B23E7514500CFF3EC /* LocationPickerExample */,
 				4E2B5A1C23E7513000CFF3EC /* Products */,
+				4E598D4624773FFB0080D18A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,13 +91,12 @@
 				4E2B5A1E23E7513000CFF3EC /* LocationPicker.h */,
 				4E2B5A3E23E7518700CFF3EC /* LocationPickerViewController.swift */,
 				4E2B5A3F23E7518700CFF3EC /* LocationTableViewCell.swift */,
-				4E67020E23FCA01700B3DE26 /* LocationItem.swift */,
 				4E2B5A3223E7514500CFF3EC /* Main.storyboard */,
 				4E67020C23FC9BF900B3DE26 /* LocationPickerEx.swift */,
+				4E5027642477239400C59020 /* LocationItem.swift */,
 				4E2B5A4123E7518800CFF3EC /* SearchView.swift */,
 				4E502746247716BA00C59020 /* Resources */,
 				4E2840BE23FB599900DC728B /* Localizable.strings */,
-				4E2B5A4023E7518800CFF3EC /* SearchView */,
 			);
 			path = LocationPicker;
 			sourceTree = "<group>";
@@ -115,13 +115,6 @@
 			path = LocationPickerExample;
 			sourceTree = "<group>";
 		};
-		4E2B5A4023E7518800CFF3EC /* SearchView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SearchView;
-			sourceTree = "<group>";
-		};
 		4E502746247716BA00C59020 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +122,13 @@
 				4E502747247716BA00C59020 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		4E598D4624773FFB0080D18A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,7 +249,7 @@
 				4E3A8184247611BA0010131F /* SearchView.swift in Sources */,
 				4E3A8182247611960010131F /* LocationTableViewCell.swift in Sources */,
 				4E3A8180247611810010131F /* LocationPickerEx.swift in Sources */,
-				4E3A81812476118C0010131F /* LocationItem.swift in Sources */,
+				4E5027652477239400C59020 /* LocationItem.swift in Sources */,
 				4E3A8183247611960010131F /* LocationPickerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -473,6 +473,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 8C7RSZ7C3V;
 				INFOPLIST_FILE = LocationPickerExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -492,6 +493,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 8C7RSZ7C3V;
 				INFOPLIST_FILE = LocationPickerExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
