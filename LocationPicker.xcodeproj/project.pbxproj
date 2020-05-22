@@ -19,8 +19,8 @@
 		4E3A8183247611960010131F /* LocationPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B5A3E23E7518700CFF3EC /* LocationPickerViewController.swift */; };
 		4E3A8184247611BA0010131F /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B5A4123E7518800CFF3EC /* SearchView.swift */; };
 		4E5027652477239400C59020 /* LocationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5027642477239400C59020 /* LocationItem.swift */; };
-		4E598D642477663E0080D18A /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E598D602477663E0080D18A /* SearchView.xib */; };
 		4E598D682477666F0080D18A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E598D662477666F0080D18A /* Main.storyboard */; };
+		4E598D6B24776A750080D18A /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E598D6A24776A750080D18A /* SearchView.xib */; };
 		4EA63F4B23EA2B270010A6AF /* Location.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4EA63F4A23EA2B270010A6AF /* Location.gpx */; };
 /* End PBXBuildFile section */
 
@@ -42,8 +42,8 @@
 		4E2B5A4123E7518800CFF3EC /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		4E502747247716BA00C59020 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E5027642477239400C59020 /* LocationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationItem.swift; sourceTree = "<group>"; };
-		4E598D602477663E0080D18A /* SearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchView.xib; sourceTree = "<group>"; };
 		4E598D672477666F0080D18A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4E598D6A24776A750080D18A /* SearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchView.xib; sourceTree = "<group>"; };
 		4E67020C23FC9BF900B3DE26 /* LocationPickerEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPickerEx.swift; sourceTree = "<group>"; };
 		4EA63F4A23EA2B270010A6AF /* Location.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,6 +94,7 @@
 				4E67020C23FC9BF900B3DE26 /* LocationPickerEx.swift */,
 				4E5027642477239400C59020 /* LocationItem.swift */,
 				4E2B5A4123E7518800CFF3EC /* SearchView.swift */,
+				4E598D6924776A750080D18A /* Assets */,
 				4E502746247716BA00C59020 /* Resources */,
 				4E2840BE23FB599900DC728B /* Localizable.strings */,
 			);
@@ -118,7 +119,6 @@
 			isa = PBXGroup;
 			children = (
 				4E598D662477666F0080D18A /* Main.storyboard */,
-				4E598D602477663E0080D18A /* SearchView.xib */,
 				4E502747247716BA00C59020 /* Info.plist */,
 			);
 			path = Resources;
@@ -129,6 +129,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4E598D6924776A750080D18A /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				4E598D6A24776A750080D18A /* SearchView.xib */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,8 +231,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E598D642477663E0080D18A /* SearchView.xib in Resources */,
 				4E598D682477666F0080D18A /* Main.storyboard in Resources */,
+				4E598D6B24776A750080D18A /* SearchView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
