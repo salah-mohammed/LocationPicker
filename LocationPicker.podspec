@@ -126,7 +126,7 @@ Pod::Spec.new do |s|
     # s.resource_bundle  = "*", "LocationPicker/*"
   # s.resources = 'LocationPicker/Resources/**/*'
   s.resource_bundles = {
-    'LocationPicker' => ['LocationPicker/Resources/**/*.{storyboard,xib,xcassets,json,imageset,png}']
+    'LocationPicker' => ['LocationPicker/Resources/**/*.{storyboard,xib,xcassets,json,imageset}']
   }
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
@@ -156,6 +156,6 @@ Pod::Spec.new do |s|
   # s.dependency "JSONKit", "~> 1.4"
 
 s.pod_target_xcconfig = { 'SWIFT_VERSION' => '5.0' }
- s.resources = 'Pod/Resources/*'
+ # s.resources = 'Pod/Resources/*'
 
 end
