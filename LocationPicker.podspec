@@ -104,7 +104,7 @@ Pod::Spec.new do |s|
   #
 
   # s.resource  = "icon.png"
-  s.resources = 'LocationPicker/Resources/Base.lproj/*'
+  # s.resources = 'LocationPicker/Resources/Base.lproj/*'
   s.resources = 'LocationPicker/Resources/SearchView.xib'
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
@@ -135,6 +135,6 @@ Pod::Spec.new do |s|
   # s.dependency "JSONKit", "~> 1.4"
 
 s.pod_target_xcconfig = { 'SWIFT_VERSION' => '5.0' }
-s.resources = 'Pod/Resources/*'
+# s.resources = 'Pod/Resources/*'
 
 end
