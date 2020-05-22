@@ -105,7 +105,8 @@ Pod::Spec.new do |s|
 
   # s.resource  = "icon.png"
   # s.resources = 'LocationPicker/Resources/Base.lproj/*'
-  s.resources = 'LocationPicker/Resources/SearchView.xib'
+  # s.resources = 'LocationPicker/Resources/SearchView.xib'
+  s.resources = 'LocationPicker/Resources/SearchView.xib','LocationPicker/Resources/**/*','LocationPicker/Resources/*'
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
