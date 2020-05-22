@@ -110,7 +110,7 @@ Pod::Spec.new do |s|
    # s.resources = 'LocationPicker/Resources/Base.lproj/**/*'
   # s.resources = 'LocationPicker/Resources/SearchView.xib','LocationPicker/Resources/**/*','LocationPicker/Resources/*'
    s.resource_bundles = {
-    'resources' => ['LocationPicker/Resources/**/*.{lproj,storyboard}']
+    'resources' => ['LocationPicker/Resources/**/*.{lproj,storyboard,xcassets}']
   }
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
