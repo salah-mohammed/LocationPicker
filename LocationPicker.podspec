@@ -109,13 +109,14 @@ Pod::Spec.new do |s|
   #s.resources = 'LocationPicker/Resources/**/*','LocationPicker/Resources/*','LocationPicker/Resources/Base.lproj/Main.storyboard','Pod/Resources/*','LocationPicker/Resources/Base.lproj/*'
    # s.resources = 'LocationPicker/Resources/Base.lproj/**/*'
   # s.resources = 'LocationPicker/Resources/SearchView.xib','LocationPicker/Resources/**/*','LocationPicker/Resources/*'
-   s.resource_bundles = {
-    # 'resources' => ['LocationPicker/Resources/**/*.{lproj,storyboard,xcassets}','LocationPicker/Resources/Base.lproj/**/*.{lproj,storyboard,xcassets}']
-  # 'LocationPicker' => ['LocationPicker/Resources/Base.lproj/**/*.storyboard','LocationPicker/Resources/Base.lproj/**/Main.storyboard','LocationPicker/Resources/*/Main.storyboard','LocationPicker/Resources/Base.lproj/Main.storyboard']
-    'LocationPicker' => ['LocationPicker/Resources/*.storyboard']
+  #  s.resource_bundles = {
+  #   # 'resources' => ['LocationPicker/Resources/**/*.{lproj,storyboard,xcassets}','LocationPicker/Resources/Base.lproj/**/*.{lproj,storyboard,xcassets}']
+  # # 'LocationPicker' => ['LocationPicker/Resources/Base.lproj/**/*.storyboard','LocationPicker/Resources/Base.lproj/**/Main.storyboard','LocationPicker/Resources/*/Main.storyboard','LocationPicker/Resources/Base.lproj/Main.storyboard']
+  #   'LocationPicker' => ['LocationPicker/Resources/*.storyboard']
 
-  }
-  
+  # }
+    s.resource_bundle = { 'LocationPicker' => [ 'LocationPicker/**/*.{png,storyboard,lproj}' ] }
+
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
 
@@ -138,7 +139,7 @@ Pod::Spec.new do |s|
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  # s.requires_arc = true
+  s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
