@@ -94,6 +94,7 @@
 				4E67020C23FC9BF900B3DE26 /* LocationPickerEx.swift */,
 				4E5027642477239400C59020 /* LocationItem.swift */,
 				4E2B5A4123E7518800CFF3EC /* SearchView.swift */,
+				4E598D80247774680080D18A /* SearchView.xib */,
 				4E598D6C24776CB50080D18A /* Resources */,
 				4E2840BE23FB599900DC728B /* Localizable.strings */,
 			);
@@ -125,7 +126,6 @@
 			isa = PBXGroup;
 			children = (
 				4E598D85247775F90080D18A /* Main.storyboard */,
-				4E598D80247774680080D18A /* SearchView.xib */,
 				4E598D7224776CF70080D18A /* Info.plist */,
 			);
 			path = Resources;
