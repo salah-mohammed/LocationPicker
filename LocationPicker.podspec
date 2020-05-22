@@ -126,7 +126,7 @@ Pod::Spec.new do |s|
     # s.resource_bundle  = "*", "LocationPicker/*"
   # s.resources = 'LocationPicker/Resources/**/*'
   s.resource_bundles = {
-    'LocationPicker' => ['LocationPicker/Resources/**/*.{storyboard,xib,xcassets,json,imageset,bundle,strings}']
+    'LocationPicker' => ['LocationPicker/Resources/**/*.{xib,xcassets,json,imageset,bundle,strings,storyboard}']
   }
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
