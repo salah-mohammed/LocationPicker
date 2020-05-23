@@ -171,14 +171,16 @@ open class LocationPickerViewController: UIViewController {
     didTapDoneButton(doneButton:true);
     }
     public static func initPicker(_ selectedLocation:LocationItem?=nil,_ span:MKCoordinateSpan?=nil)->LocationPickerViewController?{
-            let storyboard = UIStoryboard.init(name: "LocationPicker", bundle: Bundle(for: self));
-            let  vc = storyboard.instantiateViewController(withIdentifier:"LocationPickerViewController") as? LocationPickerViewController;
-        vc?.selectedLocation=selectedLocation;
+        if let storyboard:UIStoryboard = UIStoryboard.init(name: "LocationPicker", bundle:Bundle.framwWorkBundle),
+            let vc = storyboard.instantiateViewController(withIdentifier:"LocationPickerViewController") as? LocationPickerViewController{
+            vc.selectedLocation=selectedLocation;
         if let span:MKCoordinateSpan=span{
-        vc?.span = span;
+            vc.span = span;
         }
         return vc;
     }
+        return nil;
+}
 }
 internal extension LocationPickerViewController {
 

@@ -198,3 +198,12 @@ extension CLLocationCoordinate2D{
         return "(\(latitude),\(longitude))";
     }
 }
+extension Bundle{
+    class var framwWorkBundle:Bundle?{
+        let podBundle = Bundle(for: LocationPickerViewController.self)
+        if let bundleURL:URL = podBundle.url(forResource: "LocationPicker", withExtension: "bundle"){
+        return Bundle(url: bundleURL)
+        }
+        return nil;
+    }
+}
