@@ -8,7 +8,7 @@
 import MapKit
 extension String{
     var localize_ : String {
-        return NSLocalizedString(self, comment: "")
+        return NSLocalizedString(self, tableName: nil, bundle:Bundle.framwWorkBundle ?? Bundle.main, value: "", comment: "")
     }
 }
 extension UIStoryboard{

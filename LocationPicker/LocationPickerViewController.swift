@@ -137,9 +137,12 @@ open class LocationPickerViewController: UIViewController {
         if let selectedLocation:LocationItem=self.selectedLocation{
             self.selectedLocation=selectedLocation;
         }
+        setupLocalization();
+    }
+    func setupLocalization(){
         self.btnDone.setTitle("Done".localize_, for: .normal);
         self.btnCancel.setTitle("Cancel".localize_, for: .normal);
-
+        self.searchView.placeHolder="Search".localize_
     }
     open override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews();
