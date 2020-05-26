@@ -25,7 +25,7 @@ open class LocationPickerViewController: UIViewController {
     var span:MKCoordinateSpan = MKCoordinateSpan.init(latitudeDelta: 0.005, longitudeDelta: 0.005)
     private var userLocation:LocationItem?{
         if let coordinate:CLLocationCoordinate2D = self.mapView.userLocation.location?.coordinate{
-            return  LocationItem.init(location:coordinate, title:"CurrentLocation".localize_, subtitle:self.mapView.userLocation.location?.coordinate.locationDescription ?? "", type: nil)
+            return  LocationItem.init(coordinate, title:"CurrentLocation".localize_, subtitle:self.mapView.userLocation.location?.coordinate.locationDescription ?? "", type: nil)
         }
         return nil;
     }
@@ -102,7 +102,7 @@ open class LocationPickerViewController: UIViewController {
     private var selectedLocation:LocationItem?{
         didSet{
             if self.isViewLoaded{
-            if let selectedLocation:LocationItem=self.selectedLocation,let cordinate:CLLocationCoordinate2D = selectedLocation.location{
+            if let selectedLocation:LocationItem=self.selectedLocation,let cordinate:CLLocationCoordinate2D = selectedLocation.coordinate{
             self.setRegion(cordinate)
             self.addAnotaion(cordinate)
                 nearlyPlace(self.searchView.text);
@@ -196,7 +196,7 @@ internal extension LocationPickerViewController {
                 return
             }
             
-            self.success?(LocationItem.init(location: self.mapView.centerCoordinate, title: "", subtitle:"", type: nil), doneButton)
+            self.success?(LocationItem.init(self.mapView.centerCoordinate, title: "", subtitle:"", type: nil), doneButton)
         }
     }
 }
@@ -309,14 +309,14 @@ extension LocationPickerViewController: UITableViewDelegate,UITableViewDataSourc
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
              switch objects[indexPath.row] {
              case .currentLocation:
-                if let currentLocation:LocationItem = self.userLocation,let coordinate:CLLocationCoordinate2D = currentLocation.location{
+                if let currentLocation:LocationItem = self.userLocation,let coordinate:CLLocationCoordinate2D = currentLocation.coordinate{
                     self.pointAnnotation?.coordinate=coordinate;
                     self.mapView.setCenter(coordinate, animated: true)
                     self.didTapDoneButton(currentLocation,doneButton:false);
                     }
                 break;
              case .customeLocation(let location):
-                if let location:LocationItem = location,let coordinate:CLLocationCoordinate2D = location.location{
+                if let location:LocationItem = location,let coordinate:CLLocationCoordinate2D = location.coordinate{
                     self.pointAnnotation?.coordinate=coordinate;
                 self.mapView.setCenter(coordinate, animated: true)
                 }
@@ -361,7 +361,7 @@ extension LocationPickerViewController{
             }
         if let mapItems:[MKMapItem] = response?.mapItems,mapItems.count >= 0  {
             for object in response?.mapItems ?? [] {
-                self.objects.append(.customeLocation(LocationItem.init(location: object.placemark.coordinate, title: object.name ?? "", subtitle: object.placemark.title ?? self.mapView.userLocation.location?.coordinate.locationDescription ?? "", type: object.pointOfInterestCategory)
+                self.objects.append(.customeLocation(LocationItem.init(object.placemark.coordinate, title: object.name ?? "", subtitle: object.placemark.title ?? self.mapView.userLocation.location?.coordinate.locationDescription ?? "", type: object.pointOfInterestCategory)
 ));
             }
         }else

@@ -11,12 +11,12 @@ import MapKit
 public class LocationItem:NSObject {
     public var title:String?
     public var subtitle:String?
-    public var location:CLLocationCoordinate2D?
+    public var coordinate:CLLocationCoordinate2D?
     public var type:MKPointOfInterestCategory?
 
-    public init(location:CLLocationCoordinate2D,title:String,subtitle:String,type:MKPointOfInterestCategory?) {
+    public init(_ coordinate:CLLocationCoordinate2D,title:String,subtitle:String,type:MKPointOfInterestCategory?) {
         super.init()
-        self.location = location;
+        self.coordinate = coordinate;
         self.title = title;
         self.subtitle = subtitle;
         self.type=type
