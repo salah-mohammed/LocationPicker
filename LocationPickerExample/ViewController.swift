@@ -22,12 +22,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func btnPush(_ sender: Any) {
-   if let vc:LocationPickerViewController = LocationPickerViewController.initPicker(LocationItem.init(location:CLLocationCoordinate2D.init(latitude:31.210566, longitude:29.912188), title:"", subtitle:"", type: nil), nil){
+   if let vc:LocationPickerViewController = LocationPickerViewController.initPicker(LocationItem.init(CLLocationCoordinate2D.init(latitude:31.210566, longitude:29.912188), title:"", subtitle:"", type: nil), nil){
        vc.success={ (object,doneButton) in
            if doneButton {
                vc.dismiss(animated: true, completion: nil);
            }
-           self.lblPushCoordinate.text="\(Int(object.location?.latitude ?? 0)),\(Int(object.location?.longitude ?? 0))"
+           self.lblPushCoordinate.text="\(Int(object.coordinate?.latitude ?? 0)),\(Int(object.coordinate?.longitude ?? 0))"
            self.lblPushAddress.text=object.title ?? "";
        }
        vc.failure={ (error) in
@@ -40,12 +40,12 @@ class ViewController: UIViewController {
    }
     }
     @IBAction func btnPresent(_ sender: Any) {
-        if let vc:LocationPickerViewController = LocationPickerViewController.initPicker(LocationItem.init(location:CLLocationCoordinate2D.init(latitude:31.210566, longitude:29.912188), title:"", subtitle:"", type: nil), nil){
+        if let vc:LocationPickerViewController = LocationPickerViewController.initPicker(LocationItem.init(CLLocationCoordinate2D.init(latitude:31.210566, longitude:29.912188), title:"", subtitle:"", type: nil), nil){
             vc.success={ (object,doneButton) in
                 if doneButton {
                     vc.dismiss(animated: true, completion: nil);
                 }
-                self.lblPresentCoordinate.text="\(Int(object.location?.latitude ?? 0)),\(Int(object.location?.longitude ?? 0))"
+                self.lblPresentCoordinate.text="\(Int(object.coordinate?.latitude ?? 0)),\(Int(object.coordinate?.longitude ?? 0))"
                 self.lblPresentAddress.text=object.title ?? "";
             }
             vc.failure={ (error) in
