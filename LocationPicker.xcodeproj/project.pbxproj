@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4E2840BC23FB599900DC728B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4E2840BE23FB599900DC728B /* Localizable.strings */; };
 		4E2B5A2023E7513000CFF3EC /* LocationPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E2B5A1E23E7513000CFF3EC /* LocationPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E2B5A2D23E7514500CFF3EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B5A2C23E7514500CFF3EC /* AppDelegate.swift */; };
 		4E2B5A2F23E7514500CFF3EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B5A2E23E7514500CFF3EC /* SceneDelegate.swift */; };
@@ -21,13 +20,12 @@
 		4E598D8824782D6F0080D18A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E2B5A3523E7514800CFF3EC /* Assets.xcassets */; };
 		4E598D8F24783B760080D18A /* LocationPicker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4E598D8E24783B750080D18A /* LocationPicker.bundle */; };
 		4E598D992478737E0080D18A /* LocationPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E598D972478737E0080D18A /* LocationPicker.storyboard */; };
+		4E8E09C3247D83A30085BC3E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4E8E09C1247D83A30085BC3E /* Localizable.strings */; };
 		4EA63F4B23EA2B270010A6AF /* Location.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4EA63F4A23EA2B270010A6AF /* Location.gpx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4E2840B923FB57A000DC728B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		4E2840BD23FB599900DC728B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
-		4E2840BF23FB599F00DC728B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4E2B5A1B23E7513000CFF3EC /* LocationPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LocationPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E2B5A1E23E7513000CFF3EC /* LocationPicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationPicker.h; sourceTree = "<group>"; };
 		4E2B5A2A23E7514500CFF3EC /* LocationPickerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocationPickerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,6 +43,8 @@
 		4E598D8E24783B750080D18A /* LocationPicker.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = LocationPicker.bundle; sourceTree = "<group>"; };
 		4E598D982478737E0080D18A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LocationPicker.storyboard; sourceTree = "<group>"; };
 		4E67020C23FC9BF900B3DE26 /* LocationPickerEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPickerEx.swift; sourceTree = "<group>"; };
+		4E8E09C2247D83A30085BC3E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4E8E09C4247D83D40085BC3E /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4EA63F4A23EA2B270010A6AF /* Location.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,7 +95,6 @@
 				4E5027642477239400C59020 /* LocationItem.swift */,
 				4E2B5A4123E7518800CFF3EC /* SearchView.swift */,
 				4E598D6C24776CB50080D18A /* Resources */,
-				4E2840BE23FB599900DC728B /* Localizable.strings */,
 			);
 			path = LocationPicker;
 			sourceTree = "<group>";
@@ -127,6 +126,7 @@
 				4E598D8E24783B750080D18A /* LocationPicker.bundle */,
 				4E2B5A3523E7514800CFF3EC /* Assets.xcassets */,
 				4E598D7224776CF70080D18A /* Info.plist */,
+				4E8E09C1247D83A30085BC3E /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -224,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E598D992478737E0080D18A /* LocationPicker.storyboard in Resources */,
+				4E8E09C3247D83A30085BC3E /* Localizable.strings in Resources */,
 				4E598D8F24783B760080D18A /* LocationPicker.bundle in Resources */,
 				4E598D8824782D6F0080D18A /* Assets.xcassets in Resources */,
 			);
@@ -235,7 +236,6 @@
 			files = (
 				4E2B5A3923E7514800CFF3EC /* LaunchScreen.storyboard in Resources */,
 				4EA63F4B23EA2B270010A6AF /* Location.gpx in Resources */,
-				4E2840BC23FB599900DC728B /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,15 +267,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4E2840BE23FB599900DC728B /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4E2840BD23FB599900DC728B /* ar */,
-				4E2840BF23FB599F00DC728B /* en */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
 		4E2B5A3723E7514800CFF3EC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -291,6 +282,15 @@
 				4E598D982478737E0080D18A /* Base */,
 			);
 			name = LocationPicker.storyboard;
+			sourceTree = "<group>";
+		};
+		4E8E09C1247D83A30085BC3E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4E8E09C2247D83A30085BC3E /* en */,
+				4E8E09C4247D83D40085BC3E /* ar */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
