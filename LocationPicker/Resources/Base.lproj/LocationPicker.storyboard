@@ -88,10 +88,10 @@
                                                     <rect key="frame" x="188.5" y="75" width="37" height="37"/>
                                                 </activityIndicatorView>
                                                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="uFR-2G-zjF">
-                                                    <rect key="frame" x="141.5" y="5" width="131" height="37"/>
+                                                    <rect key="frame" x="139.5" y="8" width="135" height="37"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="Pbe-cX-tnv"/>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="Tpg-Qs-Zpr"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="135" id="Tpg-Qs-Zpr"/>
                                                     </constraints>
                                                     <segments>
                                                         <segment title="First"/>
@@ -110,7 +110,7 @@
                                                 <constraint firstItem="Kls-oJ-way" firstAttribute="leading" secondItem="acp-gP-esj" secondAttribute="leading" id="KSL-wO-sLz"/>
                                                 <constraint firstAttribute="trailing" secondItem="Kls-oJ-way" secondAttribute="trailing" id="Nzk-ki-sdm"/>
                                                 <constraint firstAttribute="bottom" secondItem="pzK-mU-5sz" secondAttribute="bottom" constant="16" id="Qz6-2T-iw1"/>
-                                                <constraint firstItem="uFR-2G-zjF" firstAttribute="top" secondItem="acp-gP-esj" secondAttribute="top" constant="5" id="wKV-T2-xEI"/>
+                                                <constraint firstItem="uFR-2G-zjF" firstAttribute="top" secondItem="acp-gP-esj" secondAttribute="top" constant="8" id="wKV-T2-xEI"/>
                                                 <constraint firstItem="pzK-mU-5sz" firstAttribute="centerX" secondItem="acp-gP-esj" secondAttribute="centerX" id="wdl-0q-NUe"/>
                                             </constraints>
                                         </view>
