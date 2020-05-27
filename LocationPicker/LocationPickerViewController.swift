@@ -174,6 +174,7 @@ open class LocationPickerViewController: UIViewController {
     didTapDoneButton(doneButton:true);
     }
     public static func initPicker(_ selectedLocation:LocationItem?=nil,_ span:MKCoordinateSpan?=nil)->LocationPickerViewController?{
+        FramwWorkConstants.frameWorkBundle = Bundle.framwWorkBundle;
         if let storyboard:UIStoryboard = UIStoryboard.init(name: "LocationPicker", bundle:Bundle.framwWorkBundle),
             let vc = storyboard.instantiateViewController(withIdentifier:"LocationPickerViewController") as? LocationPickerViewController{
             vc.selectedLocation=selectedLocation;
@@ -291,7 +292,7 @@ extension LocationPickerViewController: UITableViewDelegate,UITableViewDataSourc
         case .currentLocation(let currentLocation):
             cell.lblTitle.text = currentLocation.title
             cell.lblSubtitle.text = currentLocation.subtitle;
-            cell.imageView?.image=UIImage.init(named:"ic_currentLocation");
+            cell.imageView?.image=UIImage.bs_frameWorkInit(named:"ic_currentLocation");
             break;
         case .customeLocation(let location):
             cell.lblTitle.text=location.title

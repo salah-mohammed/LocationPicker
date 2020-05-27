@@ -26,6 +26,7 @@
 		4EEFDB83247DEDBE00C9E816 /* LocationPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E598D972478737E0080D18A /* LocationPicker.storyboard */; };
 		4EEFDB84247DEE2600C9E816 /* LocationPicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2B5A1B23E7513000CFF3EC /* LocationPicker.framework */; };
 		4EEFDB85247DEE2600C9E816 /* LocationPicker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2B5A1B23E7513000CFF3EC /* LocationPicker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4EEFDB8A247DF78000C9E816 /* FramwWorkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEFDB89247DF78000C9E816 /* FramwWorkConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		4E8E09C5247D8E9E0085BC3E /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4EA63F4A23EA2B270010A6AF /* Location.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
 		4EEFDB68247D8FED00C9E816 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4EEFDB89247DF78000C9E816 /* FramwWorkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FramwWorkConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				4E2B5A1E23E7513000CFF3EC /* LocationPicker.h */,
+				4EEFDB89247DF78000C9E816 /* FramwWorkConstants.swift */,
 				4E2B5A3E23E7518700CFF3EC /* LocationPickerViewController.swift */,
 				4E2B5A3F23E7518700CFF3EC /* LocationTableViewCell.swift */,
 				4E67020C23FC9BF900B3DE26 /* LocationPickerEx.swift */,
@@ -284,6 +287,7 @@
 			files = (
 				4E3A8184247611BA0010131F /* SearchView.swift in Sources */,
 				4E3A8182247611960010131F /* LocationTableViewCell.swift in Sources */,
+				4EEFDB8A247DF78000C9E816 /* FramwWorkConstants.swift in Sources */,
 				4E3A8180247611810010131F /* LocationPickerEx.swift in Sources */,
 				4E5027652477239400C59020 /* LocationItem.swift in Sources */,
 				4E3A8183247611960010131F /* LocationPickerViewController.swift in Sources */,
