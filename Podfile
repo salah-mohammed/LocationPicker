@@ -6,6 +6,6 @@ target 'LocationPickerExample' do
   use_frameworks!
 
 
-  pod 'LocationPicker', :path => '/Users/salah/Salah_Mohammed/Projects/IOSProjects/Own/MyLibraries/LocationPicker'
+#  pod 'LocationPicker', :path => '/Users/salah/Salah_Mohammed/Projects/IOSProjects/Own/MyLibraries/LocationPicker'
 
 end

@@ -1,16 +1,3 @@
-PODS:
-  - LocationPicker (0.0.1)
-
-DEPENDENCIES:
-  - LocationPicker (from `/Users/salah/Salah_Mohammed/Projects/IOSProjects/Own/MyLibraries/LocationPicker`)
-
-EXTERNAL SOURCES:
-  LocationPicker:
-    :path: "/Users/salah/Salah_Mohammed/Projects/IOSProjects/Own/MyLibraries/LocationPicker"
-
-SPEC CHECKSUMS:
-  LocationPicker: 1d9b0d571ded8742bd819fdbe7111e7ee9aaf62c
-
-PODFILE CHECKSUM: 1f1af187c5d7501f9b8edb39ed3e939976fb9069
+PODFILE CHECKSUM: 2cebfc88e4356c68ef9a893b6799865b0e86aa58
 
 COCOAPODS: 1.9.1
