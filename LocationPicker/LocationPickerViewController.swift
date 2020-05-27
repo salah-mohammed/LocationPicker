@@ -292,7 +292,7 @@ extension LocationPickerViewController: UITableViewDelegate,UITableViewDataSourc
         case .currentLocation(let currentLocation):
             cell.lblTitle.text = currentLocation.title
             cell.lblSubtitle.text = currentLocation.subtitle;
-        cell.img?.image=UIImage.bs_frameWorkInit(named:"ic_currentLocation");
+            cell.img?.image=UIImage.bs_frameWorkInit(named:"ic_currentLocation");
             break;
         case .customeLocation(let location):
             cell.lblTitle.text=location.title
