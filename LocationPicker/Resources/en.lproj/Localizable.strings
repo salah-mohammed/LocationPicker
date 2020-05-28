@@ -49,3 +49,5 @@
 "university"="university";
 "winery"="winery";
 "zoo"="zoo";
+"LocationPickerViewController.ActionType.center.title"="center";
+"LocationPickerViewController.ActionType.click.title"="click";

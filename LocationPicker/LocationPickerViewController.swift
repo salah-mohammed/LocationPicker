@@ -21,6 +21,7 @@ case currentLocation(LocationItem)
 case customeLocation(LocationItem)
 }
 
+
 open class LocationPickerViewController: UIViewController {
     var span:MKCoordinateSpan = MKCoordinateSpan.init(latitudeDelta: 0.005, longitudeDelta: 0.005)
     private var userLocation:LocationItem?{
@@ -35,9 +36,9 @@ open class LocationPickerViewController: UIViewController {
         var title:String{
             switch self {
             case .center:
-                return "center"
+                return "LocationPickerViewController.ActionType.center.title".localize_
             case .click:
-                return "click"
+                return "LocationPickerViewController.ActionType.click.title".localize_
             }
         }
     }

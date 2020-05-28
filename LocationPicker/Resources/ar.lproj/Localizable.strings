@@ -49,3 +49,5 @@
 "university"="جامعة";
 "winery"="مصنع الخمرة";
 "zoo"="حديقة حيوان";
+"LocationPickerViewController.ActionType.center.title"="ثابت";
+"LocationPickerViewController.ActionType.click.title"="الضغط";
