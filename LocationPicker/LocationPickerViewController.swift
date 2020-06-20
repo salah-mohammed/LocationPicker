@@ -235,6 +235,7 @@ extension LocationPickerViewController: MKMapViewDelegate {
     self.btnDone.isHidden=true;
         }else{
     self.btnDone.isHidden=false;
+    self.nearlyPlace(self.searchView.text);
         }
     }
 
