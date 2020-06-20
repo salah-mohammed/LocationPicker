@@ -235,7 +235,7 @@ extension LocationPickerViewController: MKMapViewDelegate {
     self.btnDone.isHidden=true;
         }else{
     self.btnDone.isHidden=false;
-    self.nearlyPlace(self.searchView.text);
+    self.updateCoordinate(true);
         }
     }
 
@@ -408,9 +408,9 @@ extension LocationPickerViewController{
         }else
         if self.actionType == .center {
         self.pointAnnotation?.coordinate = mapView.region.center
-            if refreshPlaces {
+        }
+        if refreshPlaces {
         self.nearlyPlace(self.searchView.text);
-            }
         }
     }
     @objc func longTap(sender: UIGestureRecognizer){
