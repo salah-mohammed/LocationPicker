@@ -233,6 +233,8 @@ extension LocationPickerViewController: MKMapViewDelegate {
     self.activityIndicatorView.stopAnimating();
         if self.pointAnnotation?.coordinate == nil {
     self.btnDone.isHidden=true;
+        }else{
+    self.btnDone.isHidden=false;
         }
     }
 
