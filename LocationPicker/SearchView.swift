@@ -93,7 +93,7 @@ class SearchView: UIView,UITextFieldDelegate {
         self.setupView();
     }
     func loadViewFromNib() -> UIView! {
-        let nib = UINib(nibName: String(describing: type(of: self)), bundle: Bundle.framwWorkBundle)
+        let nib = UINib(nibName: String(describing: type(of: self)), bundle:Bundle(for: LocationPickerViewController.self))
         let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
         
         return view
