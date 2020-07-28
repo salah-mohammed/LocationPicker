@@ -9,5 +9,4 @@
 import UIKit
 
 class FramwWorkConstants: NSObject {
-//    static var frameWorkBundle:Bundle?
 }
