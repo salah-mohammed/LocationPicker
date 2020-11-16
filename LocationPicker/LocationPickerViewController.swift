@@ -175,8 +175,8 @@ open class LocationPickerViewController: UIViewController {
     didTapDoneButton(doneButton:true);
     }
     public static func initPicker(_ selectedLocation:LocationItem?=nil,_ span:MKCoordinateSpan?=nil)->LocationPickerViewController?{
-        if let storyboard:UIStoryboard = UIStoryboard.init(name: "LocationPicker", bundle:Bundle(for: LocationPickerViewController.self)),
-            let vc = storyboard.instantiateViewController(withIdentifier:"LocationPickerViewController") as? LocationPickerViewController{
+        let storyboard:UIStoryboard = UIStoryboard.init(name: "LocationPicker", bundle:Bundle(for: LocationPickerViewController.self))
+        if let vc = storyboard.instantiateViewController(withIdentifier:"LocationPickerViewController") as? LocationPickerViewController{
             vc.selectedLocation=selectedLocation;
         if let span:MKCoordinateSpan=span{
             vc.span = span;
@@ -324,7 +324,7 @@ extension LocationPickerViewController: UITableViewDelegate,UITableViewDataSourc
                     }
                 break;
              case .customeLocation(let location):
-                if let location:LocationItem = location,let coordinate:CLLocationCoordinate2D = location.coordinate{
+                if let coordinate:CLLocationCoordinate2D = location.coordinate{
                     self.pointAnnotation?.coordinate=coordinate;
                 self.mapView.setCenter(coordinate, animated: true)
                 }
