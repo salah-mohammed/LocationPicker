@@ -175,7 +175,8 @@ open class LocationPickerViewController: UIViewController {
     didTapDoneButton(doneButton:true);
     }
     public static func initPicker(_ selectedLocation:LocationItem?=nil,_ span:MKCoordinateSpan?=nil)->LocationPickerViewController?{
-        let storyboard:UIStoryboard = UIStoryboard.init(name: "LocationPicker", bundle:Bundle(for: LocationPickerViewController.self))
+        FramwWorkConstants.frameWorkBundle = Bundle.framwWorkBundle;
+        let storyboard:UIStoryboard = UIStoryboard.init(name: "LocationPicker", bundle:FramwWorkConstants.frameWorkBundle)
         if let vc = storyboard.instantiateViewController(withIdentifier:"LocationPickerViewController") as? LocationPickerViewController{
             vc.selectedLocation=selectedLocation;
         if let span:MKCoordinateSpan=span{
