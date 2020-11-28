@@ -8,7 +8,7 @@
 import MapKit
 extension String{
     var localize_ : String {
-        return NSLocalizedString(self, tableName: nil, bundle:Bundle(for: LocationPickerViewController.self) ?? Bundle.main, value: "", comment: "")
+        return NSLocalizedString(self, tableName: nil, bundle:Bundle.framwWorkBundle ?? Bundle.main, value: "", comment: "")
     }
 }
 extension UIStoryboard{
@@ -16,7 +16,7 @@ extension UIStoryboard{
 }
 extension UIImage {
     class func bs_frameWorkInit(named:String)->UIImage?{
-       return UIImage.init(named: named, in:Bundle(for: LocationPickerViewController.self), compatibleWith: nil);
+       return UIImage.init(named: named, in:FramwWorkConstants.frameWorkBundle, compatibleWith: nil);
     }
 }
 extension MKPointOfInterestCategory {
