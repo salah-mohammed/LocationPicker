@@ -69,6 +69,7 @@
 		4E5027642477239400C59020 /* LocationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationItem.swift; sourceTree = "<group>"; };
 		4E598D7224776CF70080D18A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E598D982478737E0080D18A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LocationPicker.storyboard; sourceTree = "<group>"; };
+		4E6103D025912D0D002D83C8 /* LocationPickerExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LocationPickerExample.entitlements; sourceTree = "<group>"; };
 		4E67020C23FC9BF900B3DE26 /* LocationPickerEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPickerEx.swift; sourceTree = "<group>"; };
 		4E8E09C2247D83A30085BC3E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4E8E09C4247D83D40085BC3E /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -135,6 +136,7 @@
 		4E2B5A2B23E7514500CFF3EC /* LocationPickerExample */ = {
 			isa = PBXGroup;
 			children = (
+				4E6103D025912D0D002D83C8 /* LocationPickerExample.entitlements */,
 				4E2B5A2C23E7514500CFF3EC /* AppDelegate.swift */,
 				4E2B5A2E23E7514500CFF3EC /* SceneDelegate.swift */,
 				4E2B5A3023E7514500CFF3EC /* ViewController.swift */,
@@ -519,6 +521,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LocationPickerExample/LocationPickerExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 8C7RSZ7C3V;
@@ -530,6 +533,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.salahmohamed.LocationPickerExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -539,6 +543,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LocationPickerExample/LocationPickerExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 8C7RSZ7C3V;
@@ -550,6 +555,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.salahmohamed.LocationPickerExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
