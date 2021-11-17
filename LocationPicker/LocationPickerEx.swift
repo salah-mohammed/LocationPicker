@@ -8,7 +8,7 @@
 import MapKit
 extension String{
     var localize_ : String {
-        return NSLocalizedString(self, tableName: nil, bundle:Bundle.framwWorkBundle ?? Bundle.main, value: "", comment: "")
+        return NSLocalizedString(self, tableName: nil, bundle:Bundle.module ?? Bundle.main, value: "", comment: "")
     }
 }
 extension UIStoryboard{
@@ -16,7 +16,7 @@ extension UIStoryboard{
 }
 extension UIImage {
     class func bs_frameWorkInit(named:String)->UIImage?{
-       return UIImage.init(named: named, in:FramwWorkConstants.frameWorkBundle, compatibleWith: nil);
+        return UIImage.init(named: named, in:Bundle.module, compatibleWith: nil);
     }
 }
 extension MKPointOfInterestCategory {
@@ -204,11 +204,24 @@ extension CLLocationCoordinate2D{
     }
 }
 extension Bundle{
-    class var framwWorkBundle:Bundle?{
-        let podBundle = Bundle(for: LocationPickerViewController.self)
-        if let bundleURL:URL = podBundle.url(forResource: "LocationPicker", withExtension: "bundle"){
-        return Bundle(url: bundleURL)
-        }
-        return nil;
-    }
+    static var module: Bundle? = {
+        //firstBundle -> this will used when libarary used in example
+        if let firstBundle = Bundle(path: "\(Bundle.main.bundlePath)/Frameworks/LocationPicker.framework/LocationPicker.bundle"),FileManager.default.fileExists(atPath: firstBundle.bundlePath){
+
+    return firstBundle
+    }else
+        //secondBundle -> this will used when libarary used in pods and add libarary as static libarary
+       if let firstBundle = Bundle(path: "\(Bundle.main.bundlePath)/LocationPicker.bundle"),FileManager.default.fileExists(atPath: firstBundle.bundlePath){
+    return firstBundle
+    }else
+        //thiredBundle -> this will used when libarary used in pods
+if let secondBundle:Bundle = Bundle(path: "\(Bundle.main.bundlePath)/Frameworks/LocationPicker.framework"),FileManager.default.fileExists(atPath: secondBundle.bundlePath){
+            return secondBundle;
+    }else
+//forthBundle -> this will used when libarary used example mac os
+if let secondBundle:Bundle = Bundle(path: "\(Bundle.main.bundlePath)/Contents/Frameworks/LocationPicker.framework"),FileManager.default.fileExists(atPath: secondBundle.bundlePath){
+    return secondBundle;
+}
+      return nil
+    }()
 }
