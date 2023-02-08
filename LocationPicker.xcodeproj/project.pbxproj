@@ -27,6 +27,8 @@
 		4EEFDB69247D8FED00C9E816 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EEFDB68247D8FED00C9E816 /* Assets.xcassets */; };
 		4EEFDB83247DEDBE00C9E816 /* LocationPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E598D972478737E0080D18A /* LocationPicker.storyboard */; };
 		4EEFDB8A247DF78000C9E816 /* FramwWorkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEFDB89247DF78000C9E816 /* FramwWorkConstants.swift */; };
+		4EFEA7A627F1C65A008AE9D4 /* LocationPickerExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFEA7A527F1C65A008AE9D4 /* LocationPickerExampleUITests.swift */; };
+		4EFEA7A827F1C65A008AE9D4 /* LocationPickerExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFEA7A727F1C65A008AE9D4 /* LocationPickerExampleUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 4E2B5A1A23E7513000CFF3EC;
 			remoteInfo = LocationPicker;
+		};
+		4EFEA7A927F1C65A008AE9D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E2B5A1223E7513000CFF3EC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4E2B5A2923E7514500CFF3EC;
+			remoteInfo = LocationPickerExample;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -78,6 +87,9 @@
 		4EA63F4A23EA2B270010A6AF /* Location.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
 		4EEFDB68247D8FED00C9E816 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4EEFDB89247DF78000C9E816 /* FramwWorkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FramwWorkConstants.swift; sourceTree = "<group>"; };
+		4EFEA7A327F1C65A008AE9D4 /* LocationPickerExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocationPickerExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EFEA7A527F1C65A008AE9D4 /* LocationPickerExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPickerExampleUITests.swift; sourceTree = "<group>"; };
+		4EFEA7A727F1C65A008AE9D4 /* LocationPickerExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPickerExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +108,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4EFEA7A027F1C65A008AE9D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -104,6 +123,7 @@
 			children = (
 				4E2B5A1D23E7513000CFF3EC /* LocationPicker */,
 				4E2B5A2B23E7514500CFF3EC /* LocationPickerExample */,
+				4EFEA7A427F1C65A008AE9D4 /* LocationPickerExampleUITests */,
 				4E2B5A1C23E7513000CFF3EC /* Products */,
 				4EEFDB6D247DEAA500C9E816 /* Frameworks */,
 			);
@@ -114,6 +134,7 @@
 			children = (
 				4E2B5A1B23E7513000CFF3EC /* LocationPicker.framework */,
 				4E2B5A2A23E7514500CFF3EC /* LocationPickerExample.app */,
+				4EFEA7A327F1C65A008AE9D4 /* LocationPickerExampleUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -168,6 +189,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4EFEA7A427F1C65A008AE9D4 /* LocationPickerExampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4EFEA7A527F1C65A008AE9D4 /* LocationPickerExampleUITests.swift */,
+				4EFEA7A727F1C65A008AE9D4 /* LocationPickerExampleUITestsLaunchTests.swift */,
+			);
+			path = LocationPickerExampleUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -219,13 +249,31 @@
 			productReference = 4E2B5A2A23E7514500CFF3EC /* LocationPickerExample.app */;
 			productType = "com.apple.product-type.application";
 		};
+		4EFEA7A227F1C65A008AE9D4 /* LocationPickerExampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EFEA7AD27F1C65A008AE9D4 /* Build configuration list for PBXNativeTarget "LocationPickerExampleUITests" */;
+			buildPhases = (
+				4EFEA79F27F1C65A008AE9D4 /* Sources */,
+				4EFEA7A027F1C65A008AE9D4 /* Frameworks */,
+				4EFEA7A127F1C65A008AE9D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4EFEA7AA27F1C65A008AE9D4 /* PBXTargetDependency */,
+			);
+			name = LocationPickerExampleUITests;
+			productName = LocationPickerExampleUITests;
+			productReference = 4EFEA7A327F1C65A008AE9D4 /* LocationPickerExampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		4E2B5A1223E7513000CFF3EC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1130;
+				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = Salah;
 				TargetAttributes = {
@@ -234,6 +282,10 @@
 					};
 					4E2B5A2923E7514500CFF3EC = {
 						CreatedOnToolsVersion = 11.3;
+					};
+					4EFEA7A227F1C65A008AE9D4 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 4E2B5A2923E7514500CFF3EC;
 					};
 				};
 			};
@@ -253,6 +305,7 @@
 			targets = (
 				4E2B5A1A23E7513000CFF3EC /* LocationPicker */,
 				4E2B5A2923E7514500CFF3EC /* LocationPickerExample */,
+				4EFEA7A227F1C65A008AE9D4 /* LocationPickerExampleUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -277,6 +330,13 @@
 				4E2B5A3923E7514800CFF3EC /* LaunchScreen.storyboard in Resources */,
 				4EEFDB69247D8FED00C9E816 /* Assets.xcassets in Resources */,
 				4EA63F4B23EA2B270010A6AF /* Location.gpx in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EFEA7A127F1C65A008AE9D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +366,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4EFEA79F27F1C65A008AE9D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EFEA7A827F1C65A008AE9D4 /* LocationPickerExampleUITestsLaunchTests.swift in Sources */,
+				4EFEA7A627F1C65A008AE9D4 /* LocationPickerExampleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -313,6 +382,11 @@
 			isa = PBXTargetDependency;
 			target = 4E2B5A1A23E7513000CFF3EC /* LocationPicker */;
 			targetProxy = 4E31239B249E8A1F0096AA3F /* PBXContainerItemProxy */;
+		};
+		4EFEA7AA27F1C65A008AE9D4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4E2B5A2923E7514500CFF3EC /* LocationPickerExample */;
+			targetProxy = 4EFEA7A927F1C65A008AE9D4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -561,6 +635,46 @@
 			};
 			name = Release;
 		};
+		4EFEA7AB27F1C65A008AE9D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8C7RSZ7C3V;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.salahmohamedText-wr.LocationPickerExampleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LocationPickerExample;
+			};
+			name = Debug;
+		};
+		4EFEA7AC27F1C65A008AE9D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8C7RSZ7C3V;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.salahmohamedText-wr.LocationPickerExampleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LocationPickerExample;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -587,6 +701,15 @@
 			buildConfigurations = (
 				4E2B5A3C23E7514800CFF3EC /* Debug */,
 				4E2B5A3D23E7514800CFF3EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EFEA7AD27F1C65A008AE9D4 /* Build configuration list for PBXNativeTarget "LocationPickerExampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EFEA7AB27F1C65A008AE9D4 /* Debug */,
+				4EFEA7AC27F1C65A008AE9D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

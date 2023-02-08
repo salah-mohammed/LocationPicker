@@ -19,6 +19,11 @@ extension UIImage {
         return UIImage.init(named: named, in:Bundle.module, compatibleWith: nil);
     }
 }
+public extension CLLocationCoordinate2D{
+    var lp_stringValue:String{
+        return "\(self.latitude),\(self.longitude)"
+    }
+}
 extension MKPointOfInterestCategory {
     var title:String {
         switch self {
