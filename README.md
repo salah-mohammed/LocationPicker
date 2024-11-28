@@ -32,6 +32,7 @@ pod 'LocationPicker',:git => "https://github.com/salah-mohammed/LocationPicker.g
 ```
 # How used (Webservice configuration):
 - Push 
+```swift
    if let vc:LocationPickerViewController = LocationPickerViewController.initPicker(LocationItem.init(CLLocationCoordinate2D.init(latitude:31.210566, longitude:29.912188), title:"", subtitle:"", type: nil), nil){
        vc.success={ (object,doneButton) in
            if doneButton {
@@ -50,7 +51,6 @@ pod 'LocationPicker',:git => "https://github.com/salah-mohammed/LocationPicker.g
    }
 ```
 - Present 
-
 ```swift
         if let vc:LocationPickerViewController = LocationPickerViewController.initPicker(LocationItem.init(CLLocationCoordinate2D.init(latitude:31.210566, longitude:29.912188), title:"", subtitle:"", type: nil), nil){
             vc.success={ (object,doneButton) in
